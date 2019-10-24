@@ -1,7 +1,0 @@
-<<<<<<< HEAD
-~~~branch_master~~~
-=======
-====branch====
-===master===
-===branch 2nd===
->>>>>>> new_branch
