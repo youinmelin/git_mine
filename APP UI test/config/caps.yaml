@@ -1,0 +1,10 @@
+platformName: Android
+deviceName: emulator-5554
+appPackage: com.tal.kaoyan
+appActivity: .ui.activity.SplashActivity
+noReset: False
+automationName: uiautomator2
+unicodeKeyboard: True
+resetKeyboard: True
+ip: 127.0.0.1
+port: 4723

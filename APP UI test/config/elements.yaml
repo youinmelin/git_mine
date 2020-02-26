@@ -1,0 +1,37 @@
+# all the elements of the app are in here
+#    with open('config/elements.yaml','r',encoding='utf-8') as file:
+#        elements = yaml.load(file, Loader=yaml.FullLoader)
+
+upgrade_cancel: android:id/button2
+upgrade_confirm: android:id/button1 
+welcome_page_skip: com.tal.kaoyan:id/tv_skip
+login_page_username: com.tal.kaoyan:id/login_email_edittext
+login_page_password: com.tal.kaoyan:id/login_password_edittext
+login_page_register: com.tal.kaoyan:id/login_register_text
+login_page_find_password: com.tal.kaoyan:id/login_findpassword_img
+page_toast_xpath: //*[@class='android.widget.Toast']
+login_page_loginbtn: com.tal.kaoyan:id/login_login_btn
+reg_page_userheader: com.tal.kaoyan:id/activity_register_userheader
+reg_page_username: com.tal.kaoyan:id/activity_register_username_edittext
+reg_page_password: com.tal.kaoyan:id/activity_register_password_edittext
+reg_page_email: com.tal.kaoyan:id/activity_register_email_edittext
+reg_page_regBtn: com.tal.kaoyan:id/activity_register_register_btn
+reg_page_checkbox: com.tal.kaoyan:id/activity_register_article_checkbox
+newinfo_page_year: activity_perfectinfomation_time
+newinfo_page_year_select_xpath: 
+newinfo_page_school: com.tal.kaoyan:id/perfectinfomation_edit_school_name
+newinfo_page_gobtn: com.tal.kaoyan:id/activity_perfectinfomation_goBtn
+newinfo_page_back: com.tal.kaoyan:id/myapptitle_leftbutton_image
+newinfo_page_major: com.tal.kaoyan:id/activity_perfectinfomation_major
+newinfo_majorpage_xueshu: com.tal.kaoyan:id/activity_marjorsubject_xueshu
+newinfo_majorpage_zhuanye: com.tal.kaoyan:id/activity_marjorsubject_zhuanye
+home_page_understand: com.tal.kaoyan:id/date_home_zoomimg
+home_page_bottom_calendar: com.tal.kaoyan:id/mainactivity_button_calendar
+home_page_bottom_school: com.tal.kaoyan:id/mainactivity_button_info
+home_page_bottom_bbs: com.tal.kaoyan:id/mainactivity_button_forum
+home_page_bottom_myself: com.tal.kaoyan:id/mainactivity_button_mysefl
+myself_page_setup: com.tal.kaoyan:id/myapptitle_RightButton_textview
+setup_page_logout: com.tal.kaoyan:id/setting_logout_text
+setup_page_logout_confirm: com.tal.kaoyan:id/tip_commit
+setup_page_logout_cancel: com.tal.kaoyan:id/tip_cancle
+setup_page_relogin: com.tal.kaoyan:id/activity_usercenter_userheader

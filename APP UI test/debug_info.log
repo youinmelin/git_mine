@@ -1,0 +1,622 @@
+2019-11-17 17:15:41,725 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:15:41,725 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:15:41,725 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:15:41,725 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:15:41,731 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:15:41,731 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:15:41,731 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:15:41,731 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:16:16,134 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:16:16,134 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:16:16,134 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:16:16,134 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:16:25,711 - test - DEBUG - test_login.py - 37 - ('邮箱帐户密码不能为空', '邮箱帐户密码不能为空')
+2019-11-17 17:16:25,711 - test - DEBUG - test_login.py - 37 - ('邮箱帐户密码不能为空', '邮箱帐户密码不能为空')
+2019-11-17 17:16:25,711 - test - DEBUG - test_login.py - 37 - ('邮箱帐户密码不能为空', '邮箱帐户密码不能为空')
+2019-11-17 17:16:25,711 - test - DEBUG - test_login.py - 37 - ('邮箱帐户密码不能为空', '邮箱帐户密码不能为空')
+2019-11-17 17:16:25,721 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:16:25,721 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:16:25,721 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:16:25,721 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:16:25,725 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:16:25,725 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:16:25,725 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:16:25,725 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:16:46,647 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:16:46,647 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:16:46,647 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:16:46,647 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:16:57,871 - test - DEBUG - test_login.py - 37 - ('邮箱帐户密码不能为空', '邮箱帐户密码不能为空')
+2019-11-17 17:16:57,871 - test - DEBUG - test_login.py - 37 - ('邮箱帐户密码不能为空', '邮箱帐户密码不能为空')
+2019-11-17 17:16:57,871 - test - DEBUG - test_login.py - 37 - ('邮箱帐户密码不能为空', '邮箱帐户密码不能为空')
+2019-11-17 17:16:57,871 - test - DEBUG - test_login.py - 37 - ('邮箱帐户密码不能为空', '邮箱帐户密码不能为空')
+2019-11-17 17:16:57,878 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:16:57,878 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:16:57,878 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:16:57,878 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:16:57,882 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:16:57,882 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:16:57,882 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:16:57,882 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:17:17,298 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:17:17,298 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:17:17,298 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:17:17,298 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:17:24,858 - test - DEBUG - test_login.py - 37 - ('用户名或密码错误，你还可以尝试4次', '用户名或密码错误，你还可以尝试4次')
+2019-11-17 17:17:24,858 - test - DEBUG - test_login.py - 37 - ('用户名或密码错误，你还可以尝试4次', '用户名或密码错误，你还可以尝试4次')
+2019-11-17 17:17:24,858 - test - DEBUG - test_login.py - 37 - ('用户名或密码错误，你还可以尝试4次', '用户名或密码错误，你还可以尝试4次')
+2019-11-17 17:17:24,858 - test - DEBUG - test_login.py - 37 - ('用户名或密码错误，你还可以尝试4次', '用户名或密码错误，你还可以尝试4次')
+2019-11-17 17:17:24,866 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:17:24,866 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:17:24,866 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:17:24,866 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:17:24,870 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:17:24,870 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:17:24,870 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:17:24,870 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:17:46,208 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:17:46,208 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:17:46,208 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:17:46,208 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:17:54,320 - test - DEBUG - test_login.py - 37 - ('用户名或密码错误，你还可以尝试3次', '用户名或密码错误，你还可以尝试3次')
+2019-11-17 17:17:54,320 - test - DEBUG - test_login.py - 37 - ('用户名或密码错误，你还可以尝试3次', '用户名或密码错误，你还可以尝试3次')
+2019-11-17 17:17:54,320 - test - DEBUG - test_login.py - 37 - ('用户名或密码错误，你还可以尝试3次', '用户名或密码错误，你还可以尝试3次')
+2019-11-17 17:17:54,320 - test - DEBUG - test_login.py - 37 - ('用户名或密码错误，你还可以尝试3次', '用户名或密码错误，你还可以尝试3次')
+2019-11-17 17:17:54,328 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:17:54,328 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:17:54,328 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:17:54,328 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:17:54,332 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:17:54,332 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:17:54,332 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:17:54,332 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:18:18,590 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:18:18,590 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:18:18,590 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:18:18,590 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:18:25,065 - test - DEBUG - pageObject.py - 89 - ('?', WebDriverException('An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up', None, None))
+2019-11-17 17:18:25,065 - test - DEBUG - pageObject.py - 89 - ('?', WebDriverException('An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up', None, None))
+2019-11-17 17:18:25,065 - test - DEBUG - pageObject.py - 89 - ('?', WebDriverException('An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up', None, None))
+2019-11-17 17:18:25,065 - test - DEBUG - pageObject.py - 89 - ('?', WebDriverException('An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up', None, None))
+2019-11-17 17:18:26,440 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:18:26,440 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:18:26,440 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:18:26,440 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:18:26,444 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:18:26,444 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:18:26,444 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:18:26,444 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:18:44,414 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:18:44,414 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:18:44,414 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:18:44,414 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:18:51,902 - test - DEBUG - test_login.py - 37 - ('用户名或密码错误，你还可以尝试1次', '用户名或密码错误，你还可以尝试1次')
+2019-11-17 17:18:51,902 - test - DEBUG - test_login.py - 37 - ('用户名或密码错误，你还可以尝试1次', '用户名或密码错误，你还可以尝试1次')
+2019-11-17 17:18:51,902 - test - DEBUG - test_login.py - 37 - ('用户名或密码错误，你还可以尝试1次', '用户名或密码错误，你还可以尝试1次')
+2019-11-17 17:18:51,902 - test - DEBUG - test_login.py - 37 - ('用户名或密码错误，你还可以尝试1次', '用户名或密码错误，你还可以尝试1次')
+2019-11-17 17:18:51,923 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:18:51,923 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:18:51,923 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:18:51,923 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:18:51,928 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:18:51,928 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:18:51,928 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:18:51,928 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:19:11,233 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:19:11,233 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:19:11,233 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:19:11,233 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:19:18,408 - test - DEBUG - test_login.py - 37 - ('验证失败次数过多，请15分钟后再试', '验证失败次数过多，请15分钟后再试')
+2019-11-17 17:19:18,408 - test - DEBUG - test_login.py - 37 - ('验证失败次数过多，请15分钟后再试', '验证失败次数过多，请15分钟后再试')
+2019-11-17 17:19:18,408 - test - DEBUG - test_login.py - 37 - ('验证失败次数过多，请15分钟后再试', '验证失败次数过多，请15分钟后再试')
+2019-11-17 17:19:18,408 - test - DEBUG - test_login.py - 37 - ('验证失败次数过多，请15分钟后再试', '验证失败次数过多，请15分钟后再试')
+2019-11-17 17:19:18,418 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:19:18,418 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:19:18,418 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:19:18,418 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:19:18,421 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:19:18,421 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:19:18,421 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:19:18,421 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:19:38,607 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:19:38,607 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:19:38,607 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:19:38,607 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:19:46,275 - test - DEBUG - test_login.py - 37 - ('验证失败次数过多，请15分钟后再试', '验证失败次数过多，请15分钟后再试')
+2019-11-17 17:19:46,275 - test - DEBUG - test_login.py - 37 - ('验证失败次数过多，请15分钟后再试', '验证失败次数过多，请15分钟后再试')
+2019-11-17 17:19:46,275 - test - DEBUG - test_login.py - 37 - ('验证失败次数过多，请15分钟后再试', '验证失败次数过多，请15分钟后再试')
+2019-11-17 17:19:46,275 - test - DEBUG - test_login.py - 37 - ('验证失败次数过多，请15分钟后再试', '验证失败次数过多，请15分钟后再试')
+2019-11-17 17:19:46,284 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:19:46,284 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:19:46,284 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:19:46,284 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:19:46,288 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:19:46,288 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:19:46,288 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:19:46,288 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:20:06,781 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:20:06,781 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:20:06,781 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:20:06,781 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:20:14,290 - test - DEBUG - test_login.py - 37 - ('验证失败次数过多，请15分钟后再试', '验证失败次数过多，请15分钟后再试')
+2019-11-17 17:20:14,290 - test - DEBUG - test_login.py - 37 - ('验证失败次数过多，请15分钟后再试', '验证失败次数过多，请15分钟后再试')
+2019-11-17 17:20:14,290 - test - DEBUG - test_login.py - 37 - ('验证失败次数过多，请15分钟后再试', '验证失败次数过多，请15分钟后再试')
+2019-11-17 17:20:14,290 - test - DEBUG - test_login.py - 37 - ('验证失败次数过多，请15分钟后再试', '验证失败次数过多，请15分钟后再试')
+2019-11-17 17:20:14,298 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:20:14,298 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:20:14,298 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:20:14,298 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:20:14,302 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:20:14,302 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:20:14,302 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:20:14,302 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:20:32,394 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:20:32,394 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:20:32,394 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:20:32,394 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:20:39,835 - test - DEBUG - test_login.py - 37 - ('邮箱帐户密码不能为空', '邮箱帐户密码不能为空')
+2019-11-17 17:20:39,835 - test - DEBUG - test_login.py - 37 - ('邮箱帐户密码不能为空', '邮箱帐户密码不能为空')
+2019-11-17 17:20:39,835 - test - DEBUG - test_login.py - 37 - ('邮箱帐户密码不能为空', '邮箱帐户密码不能为空')
+2019-11-17 17:20:39,835 - test - DEBUG - test_login.py - 37 - ('邮箱帐户密码不能为空', '邮箱帐户密码不能为空')
+2019-11-17 17:20:39,843 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:20:39,843 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:20:39,843 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:20:39,843 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-11-17 17:20:39,847 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:20:39,847 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:20:39,847 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:20:39,847 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-11-17 17:20:57,848 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:20:57,848 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:20:57,848 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:20:57,848 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-11-17 17:21:11,943 - test - DEBUG - pageObject.py - 89 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2019-11-17 17:21:11,943 - test - DEBUG - pageObject.py - 89 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2019-11-17 17:21:11,943 - test - DEBUG - pageObject.py - 89 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2019-11-17 17:21:11,943 - test - DEBUG - pageObject.py - 89 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2019-11-17 17:21:12,163 - test - DEBUG - test_login.py - 37 - (None, '验证失败次数过多，请15分钟后再试')
+2019-11-17 17:21:12,163 - test - DEBUG - test_login.py - 37 - (None, '验证失败次数过多，请15分钟后再试')
+2019-11-17 17:21:12,163 - test - DEBUG - test_login.py - 37 - (None, '验证失败次数过多，请15分钟后再试')
+2019-11-17 17:21:12,163 - test - DEBUG - test_login.py - 37 - (None, '验证失败次数过多，请15分钟后再试')
+2019-12-22 23:46:04,132 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-12-22 23:46:04,132 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-12-22 23:46:04,132 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-12-22 23:46:04,132 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-12-22 23:46:04,168 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-12-22 23:46:04,168 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-12-22 23:46:04,168 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-12-22 23:46:04,168 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-12-22 23:46:40,342 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-12-22 23:46:40,342 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-12-22 23:46:40,342 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-12-22 23:46:40,342 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-12-22 23:46:49,023 - test - DEBUG - test_login.py - 37 - ('邮箱帐户密码不能为空', '邮箱帐户密码不能为空')
+2019-12-22 23:46:49,023 - test - DEBUG - test_login.py - 37 - ('邮箱帐户密码不能为空', '邮箱帐户密码不能为空')
+2019-12-22 23:46:49,023 - test - DEBUG - test_login.py - 37 - ('邮箱帐户密码不能为空', '邮箱帐户密码不能为空')
+2019-12-22 23:46:49,023 - test - DEBUG - test_login.py - 37 - ('邮箱帐户密码不能为空', '邮箱帐户密码不能为空')
+2019-12-22 23:46:49,052 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-12-22 23:46:49,052 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-12-22 23:46:49,052 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-12-22 23:46:49,052 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-12-22 23:46:49,056 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-12-22 23:46:49,056 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-12-22 23:46:49,056 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-12-22 23:46:49,056 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-12-22 23:47:10,634 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-12-22 23:47:10,634 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-12-22 23:47:10,634 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-12-22 23:47:10,634 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-12-22 23:47:18,453 - test - DEBUG - test_login.py - 37 - ('邮箱帐户密码不能为空', '邮箱帐户密码不能为空')
+2019-12-22 23:47:18,453 - test - DEBUG - test_login.py - 37 - ('邮箱帐户密码不能为空', '邮箱帐户密码不能为空')
+2019-12-22 23:47:18,453 - test - DEBUG - test_login.py - 37 - ('邮箱帐户密码不能为空', '邮箱帐户密码不能为空')
+2019-12-22 23:47:18,453 - test - DEBUG - test_login.py - 37 - ('邮箱帐户密码不能为空', '邮箱帐户密码不能为空')
+2019-12-22 23:47:18,523 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-12-22 23:47:18,523 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-12-22 23:47:18,523 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-12-22 23:47:18,523 - test - DEBUG - login.py - 14 - ======ready to login==========
+2019-12-22 23:47:18,527 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-12-22 23:47:18,527 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-12-22 23:47:18,527 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-12-22 23:47:18,527 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2019-12-22 23:47:39,619 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-12-22 23:47:39,619 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-12-22 23:47:39,619 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2019-12-22 23:47:39,619 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 14:52:30,489 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:52:30,489 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:52:30,489 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:52:30,501 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:52:30,501 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:52:30,501 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:55:33,899 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:55:33,899 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:55:33,899 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:55:33,899 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:55:33,904 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:55:33,904 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:55:33,904 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:55:33,904 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:55:45,125 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:55:45,125 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:55:45,125 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:55:45,125 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:55:45,129 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:55:45,129 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:55:45,129 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:55:45,129 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:55:55,611 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:55:55,611 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:55:55,611 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:55:55,611 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:55:55,614 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:55:55,614 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:55:55,614 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:55:55,614 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:56:06,138 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:56:06,138 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:56:06,138 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:56:06,138 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:56:06,141 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:56:06,141 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:56:06,141 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:56:06,141 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:56:16,613 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:56:16,613 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:56:16,613 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:56:16,613 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:56:16,617 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:56:16,617 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:56:16,617 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:56:16,617 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:56:27,106 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:56:27,106 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:56:27,106 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:56:27,106 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:56:27,110 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:56:27,110 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:56:27,110 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:56:27,110 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:56:37,609 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:56:37,609 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:56:37,609 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:56:37,609 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:56:37,613 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:56:37,613 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:56:37,613 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:56:37,613 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:56:48,087 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:56:48,087 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:56:48,087 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:56:48,087 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:56:48,091 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:56:48,091 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:56:48,091 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:56:48,091 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:56:58,587 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:56:58,587 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:56:58,587 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:56:58,587 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:56:58,590 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:56:58,590 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:56:58,590 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:56:58,590 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:57:09,055 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:57:09,055 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:57:09,055 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:57:09,055 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:57:09,058 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:57:09,058 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:57:09,058 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:57:09,058 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:57:19,535 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:57:19,535 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:57:19,535 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:57:19,535 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 14:57:19,539 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:57:19,539 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:57:19,539 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 14:57:19,539 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:00:01,699 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:00:01,699 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:00:01,699 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:00:01,699 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:00:01,704 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:00:01,704 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:00:01,704 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:00:01,704 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:00:38,406 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:00:38,406 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:00:38,406 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:00:38,406 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:00:43,556 - test - DEBUG - pageObject.py - 27 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:00:43,556 - test - DEBUG - pageObject.py - 27 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:00:43,556 - test - DEBUG - pageObject.py - 27 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:00:43,556 - test - DEBUG - pageObject.py - 27 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:00:49,067 - test - DEBUG - pageObject.py - 37 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:00:49,067 - test - DEBUG - pageObject.py - 37 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:00:49,067 - test - DEBUG - pageObject.py - 37 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:00:49,067 - test - DEBUG - pageObject.py - 37 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:00:54,710 - test - DEBUG - pageObject.py - 49 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:00:54,710 - test - DEBUG - pageObject.py - 49 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:00:54,710 - test - DEBUG - pageObject.py - 49 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:00:54,710 - test - DEBUG - pageObject.py - 49 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:01:00,737 - test - DEBUG - pageObject.py - 59 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:01:00,737 - test - DEBUG - pageObject.py - 59 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:01:00,737 - test - DEBUG - pageObject.py - 59 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:01:00,737 - test - DEBUG - pageObject.py - 59 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:01:06,730 - test - DEBUG - pageObject.py - 69 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:01:06,730 - test - DEBUG - pageObject.py - 69 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:01:06,730 - test - DEBUG - pageObject.py - 69 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:01:06,730 - test - DEBUG - pageObject.py - 69 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:01:15,281 - test - DEBUG - pageObject.py - 89 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:01:15,281 - test - DEBUG - pageObject.py - 89 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:01:15,281 - test - DEBUG - pageObject.py - 89 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:01:15,281 - test - DEBUG - pageObject.py - 89 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:01:15,862 - test - DEBUG - test_login.py - 37 - (None, '邮箱帐户密码不能为空')
+2020-02-26 15:01:15,862 - test - DEBUG - test_login.py - 37 - (None, '邮箱帐户密码不能为空')
+2020-02-26 15:01:15,862 - test - DEBUG - test_login.py - 37 - (None, '邮箱帐户密码不能为空')
+2020-02-26 15:01:15,862 - test - DEBUG - test_login.py - 37 - (None, '邮箱帐户密码不能为空')
+2020-02-26 15:01:16,406 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:01:16,406 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:01:16,406 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:01:16,406 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:01:16,410 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:01:16,410 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:01:16,410 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:01:16,410 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:01:37,668 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:01:37,668 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:01:37,668 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:01:37,668 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:01:42,891 - test - DEBUG - pageObject.py - 27 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:01:42,891 - test - DEBUG - pageObject.py - 27 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:01:42,891 - test - DEBUG - pageObject.py - 27 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:01:42,891 - test - DEBUG - pageObject.py - 27 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:01:48,819 - test - DEBUG - pageObject.py - 37 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:01:48,819 - test - DEBUG - pageObject.py - 37 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:01:48,819 - test - DEBUG - pageObject.py - 37 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:01:48,819 - test - DEBUG - pageObject.py - 37 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:01:54,778 - test - DEBUG - pageObject.py - 49 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:01:54,778 - test - DEBUG - pageObject.py - 49 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:01:54,778 - test - DEBUG - pageObject.py - 49 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:01:54,778 - test - DEBUG - pageObject.py - 49 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:02:00,985 - test - DEBUG - pageObject.py - 59 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:02:00,985 - test - DEBUG - pageObject.py - 59 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:02:00,985 - test - DEBUG - pageObject.py - 59 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:02:00,985 - test - DEBUG - pageObject.py - 59 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:02:10,074 - test - DEBUG - pageObject.py - 89 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:02:10,074 - test - DEBUG - pageObject.py - 89 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:02:10,074 - test - DEBUG - pageObject.py - 89 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:02:10,074 - test - DEBUG - pageObject.py - 89 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:02:10,582 - test - DEBUG - test_login.py - 37 - (None, '邮箱帐户密码不能为空')
+2020-02-26 15:02:10,582 - test - DEBUG - test_login.py - 37 - (None, '邮箱帐户密码不能为空')
+2020-02-26 15:02:10,582 - test - DEBUG - test_login.py - 37 - (None, '邮箱帐户密码不能为空')
+2020-02-26 15:02:10,582 - test - DEBUG - test_login.py - 37 - (None, '邮箱帐户密码不能为空')
+2020-02-26 15:02:10,607 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:02:10,607 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:02:10,607 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:02:10,607 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:02:10,611 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:02:10,611 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:02:10,611 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:02:10,611 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:02:26,473 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:02:26,473 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:02:26,473 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:02:26,473 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:02:41,328 - test - DEBUG - test_login.py - 37 - ('用户名或密码错误，你还可以尝试4次', '用户名或密码错误，你还可以尝试4次')
+2020-02-26 15:02:41,328 - test - DEBUG - test_login.py - 37 - ('用户名或密码错误，你还可以尝试4次', '用户名或密码错误，你还可以尝试4次')
+2020-02-26 15:02:41,328 - test - DEBUG - test_login.py - 37 - ('用户名或密码错误，你还可以尝试4次', '用户名或密码错误，你还可以尝试4次')
+2020-02-26 15:02:41,328 - test - DEBUG - test_login.py - 37 - ('用户名或密码错误，你还可以尝试4次', '用户名或密码错误，你还可以尝试4次')
+2020-02-26 15:02:41,336 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:02:41,336 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:02:41,336 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:02:41,336 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:02:41,340 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:02:41,340 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:02:41,340 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:02:41,340 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:03:00,109 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:03:00,109 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:03:00,109 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:03:00,109 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:03:10,689 - test - DEBUG - pageObject.py - 89 - ('?', WebDriverException('An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up', None, None))
+2020-02-26 15:03:10,689 - test - DEBUG - pageObject.py - 89 - ('?', WebDriverException('An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up', None, None))
+2020-02-26 15:03:10,689 - test - DEBUG - pageObject.py - 89 - ('?', WebDriverException('An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up', None, None))
+2020-02-26 15:03:10,689 - test - DEBUG - pageObject.py - 89 - ('?', WebDriverException('An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up', None, None))
+2020-02-26 15:03:10,981 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:03:10,981 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:03:10,981 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:03:10,981 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:03:10,985 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:03:10,985 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:03:10,985 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:03:10,985 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:03:26,934 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:03:26,934 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:03:26,934 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:03:26,934 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:03:41,390 - test - DEBUG - test_login.py - 37 - ('用户名或密码错误，你还可以尝试2次', '用户名或密码错误，你还可以尝试2次')
+2020-02-26 15:03:41,390 - test - DEBUG - test_login.py - 37 - ('用户名或密码错误，你还可以尝试2次', '用户名或密码错误，你还可以尝试2次')
+2020-02-26 15:03:41,390 - test - DEBUG - test_login.py - 37 - ('用户名或密码错误，你还可以尝试2次', '用户名或密码错误，你还可以尝试2次')
+2020-02-26 15:03:41,390 - test - DEBUG - test_login.py - 37 - ('用户名或密码错误，你还可以尝试2次', '用户名或密码错误，你还可以尝试2次')
+2020-02-26 15:03:41,398 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:03:41,398 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:03:41,398 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:03:41,398 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:03:41,402 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:03:41,402 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:03:41,402 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:03:41,402 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:03:58,604 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:03:58,604 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:03:58,604 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:03:58,604 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:04:11,680 - test - DEBUG - test_login.py - 37 - ('用户名或密码错误，你还可以尝试1次', '用户名或密码错误，你还可以尝试1次')
+2020-02-26 15:04:11,680 - test - DEBUG - test_login.py - 37 - ('用户名或密码错误，你还可以尝试1次', '用户名或密码错误，你还可以尝试1次')
+2020-02-26 15:04:11,680 - test - DEBUG - test_login.py - 37 - ('用户名或密码错误，你还可以尝试1次', '用户名或密码错误，你还可以尝试1次')
+2020-02-26 15:04:11,680 - test - DEBUG - test_login.py - 37 - ('用户名或密码错误，你还可以尝试1次', '用户名或密码错误，你还可以尝试1次')
+2020-02-26 15:04:11,688 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:04:11,688 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:04:11,688 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:04:11,688 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:04:11,692 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:04:11,692 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:04:11,692 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:04:11,692 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:04:30,071 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:04:30,071 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:04:30,071 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:04:30,071 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:04:35,242 - test - DEBUG - pageObject.py - 27 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:04:35,242 - test - DEBUG - pageObject.py - 27 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:04:35,242 - test - DEBUG - pageObject.py - 27 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:04:35,242 - test - DEBUG - pageObject.py - 27 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:04:40,932 - test - DEBUG - pageObject.py - 37 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:04:40,932 - test - DEBUG - pageObject.py - 37 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:04:40,932 - test - DEBUG - pageObject.py - 37 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:04:40,932 - test - DEBUG - pageObject.py - 37 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:04:41,484 - test - DEBUG - pageObject.py - 49 - ('?', WebDriverException('An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up', None, None))
+2020-02-26 15:04:41,484 - test - DEBUG - pageObject.py - 49 - ('?', WebDriverException('An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up', None, None))
+2020-02-26 15:04:41,484 - test - DEBUG - pageObject.py - 49 - ('?', WebDriverException('An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up', None, None))
+2020-02-26 15:04:41,484 - test - DEBUG - pageObject.py - 49 - ('?', WebDriverException('An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up', None, None))
+2020-02-26 15:04:41,745 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:04:41,745 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:04:41,745 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:04:41,745 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:04:41,749 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:04:41,749 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:04:41,749 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:04:41,749 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:04:58,122 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:04:58,122 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:04:58,122 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:04:58,122 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:05:08,795 - test - DEBUG - test_login.py - 37 - ('验证失败次数过多，请15分钟后再试', '验证失败次数过多，请15分钟后再试')
+2020-02-26 15:05:08,795 - test - DEBUG - test_login.py - 37 - ('验证失败次数过多，请15分钟后再试', '验证失败次数过多，请15分钟后再试')
+2020-02-26 15:05:08,795 - test - DEBUG - test_login.py - 37 - ('验证失败次数过多，请15分钟后再试', '验证失败次数过多，请15分钟后再试')
+2020-02-26 15:05:08,795 - test - DEBUG - test_login.py - 37 - ('验证失败次数过多，请15分钟后再试', '验证失败次数过多，请15分钟后再试')
+2020-02-26 15:05:08,802 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:05:08,802 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:05:08,802 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:05:08,802 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:05:08,806 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:05:08,806 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:05:08,806 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:05:08,806 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:05:24,865 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:05:24,865 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:05:24,865 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:05:24,865 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:05:30,029 - test - DEBUG - pageObject.py - 27 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:05:30,029 - test - DEBUG - pageObject.py - 27 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:05:30,029 - test - DEBUG - pageObject.py - 27 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:05:30,029 - test - DEBUG - pageObject.py - 27 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:05:35,676 - test - DEBUG - pageObject.py - 37 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:05:35,676 - test - DEBUG - pageObject.py - 37 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:05:35,676 - test - DEBUG - pageObject.py - 37 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:05:35,676 - test - DEBUG - pageObject.py - 37 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:05:41,715 - test - DEBUG - pageObject.py - 49 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:05:41,715 - test - DEBUG - pageObject.py - 49 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:05:41,715 - test - DEBUG - pageObject.py - 49 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:05:41,715 - test - DEBUG - pageObject.py - 49 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:05:47,775 - test - DEBUG - pageObject.py - 59 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:05:47,775 - test - DEBUG - pageObject.py - 59 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:05:47,775 - test - DEBUG - pageObject.py - 59 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:05:47,775 - test - DEBUG - pageObject.py - 59 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:05:53,777 - test - DEBUG - pageObject.py - 69 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:05:53,777 - test - DEBUG - pageObject.py - 69 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:05:53,777 - test - DEBUG - pageObject.py - 69 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:05:53,777 - test - DEBUG - pageObject.py - 69 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:06:02,399 - test - DEBUG - pageObject.py - 89 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:06:02,399 - test - DEBUG - pageObject.py - 89 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:06:02,399 - test - DEBUG - pageObject.py - 89 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:06:02,399 - test - DEBUG - pageObject.py - 89 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:06:02,915 - test - DEBUG - test_login.py - 37 - (None, '验证失败次数过多，请15分钟后再试')
+2020-02-26 15:06:02,915 - test - DEBUG - test_login.py - 37 - (None, '验证失败次数过多，请15分钟后再试')
+2020-02-26 15:06:02,915 - test - DEBUG - test_login.py - 37 - (None, '验证失败次数过多，请15分钟后再试')
+2020-02-26 15:06:02,915 - test - DEBUG - test_login.py - 37 - (None, '验证失败次数过多，请15分钟后再试')
+2020-02-26 15:06:02,939 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:06:02,939 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:06:02,939 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:06:02,939 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:06:02,942 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:06:02,942 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:06:02,942 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:06:02,942 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:06:19,081 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:06:19,081 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:06:19,081 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:06:19,081 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:06:24,278 - test - DEBUG - pageObject.py - 27 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:06:24,278 - test - DEBUG - pageObject.py - 27 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:06:24,278 - test - DEBUG - pageObject.py - 27 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:06:24,278 - test - DEBUG - pageObject.py - 27 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:06:29,969 - test - DEBUG - pageObject.py - 37 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:06:29,969 - test - DEBUG - pageObject.py - 37 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:06:29,969 - test - DEBUG - pageObject.py - 37 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:06:29,969 - test - DEBUG - pageObject.py - 37 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:06:36,009 - test - DEBUG - pageObject.py - 49 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:06:36,009 - test - DEBUG - pageObject.py - 49 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:06:36,009 - test - DEBUG - pageObject.py - 49 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:06:36,009 - test - DEBUG - pageObject.py - 49 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:06:42,006 - test - DEBUG - pageObject.py - 59 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:06:42,006 - test - DEBUG - pageObject.py - 59 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:06:42,006 - test - DEBUG - pageObject.py - 59 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:06:42,006 - test - DEBUG - pageObject.py - 59 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:06:48,074 - test - DEBUG - pageObject.py - 69 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:06:48,074 - test - DEBUG - pageObject.py - 69 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:06:48,074 - test - DEBUG - pageObject.py - 69 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:06:48,074 - test - DEBUG - pageObject.py - 69 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:06:56,579 - test - DEBUG - pageObject.py - 89 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:06:56,579 - test - DEBUG - pageObject.py - 89 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:06:56,579 - test - DEBUG - pageObject.py - 89 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:06:56,579 - test - DEBUG - pageObject.py - 89 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:06:57,106 - test - DEBUG - test_login.py - 37 - (None, '邮箱帐户密码不能为空')
+2020-02-26 15:06:57,106 - test - DEBUG - test_login.py - 37 - (None, '邮箱帐户密码不能为空')
+2020-02-26 15:06:57,106 - test - DEBUG - test_login.py - 37 - (None, '邮箱帐户密码不能为空')
+2020-02-26 15:06:57,106 - test - DEBUG - test_login.py - 37 - (None, '邮箱帐户密码不能为空')
+2020-02-26 15:06:57,137 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:06:57,137 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:06:57,137 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:06:57,137 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:06:57,141 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:06:57,141 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:06:57,141 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:06:57,141 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:07:13,557 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:07:13,557 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:07:13,557 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:07:13,557 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:09:42,829 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:09:42,829 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:09:42,829 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:09:42,829 - test - DEBUG - login.py - 14 - ======ready to login==========
+2020-02-26 15:09:42,834 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:09:42,834 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:09:42,834 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:09:42,834 - test - DEBUG - desired_caps.py - 14 - {'platformName': 'Android', 'deviceName': 'emulator-5554', 'appPackage': 'com.tal.kaoyan', 'appActivity': '.ui.activity.SplashActivity', 'noReset': False, 'automationName': 'uiautomator2', 'unicodeKeyboard': True, 'resetKeyboard': True, 'ip': '127.0.0.1', 'port': 4723}
+2020-02-26 15:10:02,007 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:10:02,007 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:10:02,007 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:10:02,007 - test - DEBUG - pageObject.py - 20 - ('取消升级按钮定位', ('id', 'android:id/button2'))
+2020-02-26 15:10:07,079 - test - DEBUG - pageObject.py - 27 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:10:07,079 - test - DEBUG - pageObject.py - 27 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:10:07,079 - test - DEBUG - pageObject.py - 27 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:10:07,079 - test - DEBUG - pageObject.py - 27 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:10:12,772 - test - DEBUG - pageObject.py - 37 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:10:12,772 - test - DEBUG - pageObject.py - 37 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:10:12,772 - test - DEBUG - pageObject.py - 37 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:10:12,772 - test - DEBUG - pageObject.py - 37 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:10:18,680 - test - DEBUG - pageObject.py - 49 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:10:18,680 - test - DEBUG - pageObject.py - 49 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:10:18,680 - test - DEBUG - pageObject.py - 49 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:10:18,680 - test - DEBUG - pageObject.py - 49 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:10:24,584 - test - DEBUG - pageObject.py - 59 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:10:24,584 - test - DEBUG - pageObject.py - 59 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:10:24,584 - test - DEBUG - pageObject.py - 59 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:10:24,584 - test - DEBUG - pageObject.py - 59 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:10:30,580 - test - DEBUG - pageObject.py - 69 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:10:30,580 - test - DEBUG - pageObject.py - 69 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:10:30,580 - test - DEBUG - pageObject.py - 69 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
+2020-02-26 15:10:30,580 - test - DEBUG - pageObject.py - 69 - ('?', NoSuchElementException('An element could not be located on the page using the given search parameters.', None, None))
