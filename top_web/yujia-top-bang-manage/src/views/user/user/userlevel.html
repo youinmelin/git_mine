@@ -1,0 +1,47 @@
+<title>网站用户</title>
+
+<div class="layui-card layadmin-header">
+    <div class="layui-breadcrumb" lay-filter="breadcrumb">
+        <a lay-href="">主页</a>
+        <a><cite>用户</cite></a>
+        <a><cite>网站用户</cite></a>
+    </div>
+</div>
+
+<div class="orgWrap">
+</div>
+
+<script>
+    layui.use(['orgChart'], layui.factory('orgChart')).use(['orgChart'], function () {
+        var $ = layui.$
+            , admin = layui.admin
+            , orgChart = layui.orgChart;
+
+        admin.req({
+            url: layui.setter.request.url + '/mgr/user/getUserLevelVO',
+            type: "get",
+            success: function (res) {
+                var data = res.data[0]
+                //3表示显示到部门的第3级
+                orgChart.render({
+                    elm: '.orgWrap',
+                    data: data,
+                    drag: true,
+                    depth: 3,
+                    renderdata: function (data, $dom) {
+                        var value = data;
+                        if (value && Object.keys(value).length) {
+                            var $name = $('<div class="name"></div>');
+                            !!(value.name) && $name.html(value.name);
+                            $dom.append($name)
+                            $dom.addClass('organization')
+                        }
+                    },
+                    callback: function () {
+                    }
+                });
+            }
+        });
+    });
+
+</script>

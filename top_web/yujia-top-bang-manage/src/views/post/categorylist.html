@@ -1,0 +1,112 @@
+<title>文章列表</title>
+
+<div class="layui-card layadmin-header">
+    <div class="layui-breadcrumb" lay-filter="breadcrumb">
+        <a lay-href="">主页</a>
+        <a><cite>文章管理</cite></a>
+        <a><cite>文章分类</cite></a>
+    </div>
+</div>
+
+<div class="layui-fluid">
+    <div class="layui-card">
+        <div class="layui-card-body">
+            <div style="padding-bottom: 10px;">
+                <button class="layui-btn layuiadmin-btn-list" data-type="add">添加</button>
+            </div>
+            <table id="LAY-posts-category-list" lay-filter="LAY-posts-category-list"></table>
+            <script type="text/html" id="table-posts-category-list">
+                <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit"><i
+                        class="layui-icon layui-icon-edit"></i>编辑</a>
+                <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del"><i
+                        class="layui-icon layui-icon-delete"></i>删除</a>
+            </script>
+        </div>
+    </div>
+</div>
+
+<script>
+    layui.use(['posts', 'table2'], layui.factory('posts')).use(['admin', 'posts', 'table2'], function () {
+        var $ = layui.$
+            , admin = layui.admin
+            , view = layui.view
+            , table2 = layui.table2
+            , form = layui.form;
+
+        form.render(null, 'app-content-list');
+
+        //监听搜索
+        form.on('submit(LAY-app-contlist-search)', function (data) {
+            var field = data.field;
+
+            //执行重载
+            table2.reload('LAY-app-content-list', {
+                where: field
+            });
+        });
+
+        var active = {
+            batchdel: function () {
+                var checkStatus = table2.checkStatus('LAY-app-content-list')
+                    , checkData = checkStatus.data; //得到选中的数据
+
+                if (checkData.length === 0) {
+                    return layer.msg('请选择数据');
+                }
+
+                layer.confirm('确定删除吗？', function (index) {
+
+                    //执行 Ajax 后重载
+                    /*
+                    admin.req({
+                      url: 'xxx'
+                      //,……
+                    });
+                    */
+                    table2.reload('LAY-app-content-list');
+                    layer.msg('已删除');
+                });
+            }
+
+            //添加
+            , add: function (othis) {
+                admin.popup({
+                    title: '添加分类'
+                    , area: ['550px', '700px']
+                    , id: 'LAY-popup-content-add'
+                    , success: function (layero, index) {
+                        view(this.id).render('posts/categoryform').done(function () {
+                            form.render(null, 'layuiadmin-app-form-list');
+
+                            //监听提交
+                            form.on('submit(LAY-posts-category-submit)', function (data) {
+                                var field = data.field; //获取提交的字段
+
+                                //提交 Ajax 成功后，关闭当前弹层并重载表格
+                                admin.req({
+                                    url: layui.setter.request.url + '/mgr/posts/categorySave'
+                                    , data: JSON.stringify(field)
+                                    , dataType: 'json'
+                                    , contentType: "application/json"
+                                    , type: 'POST'
+                                    , success: function (res) {
+                                        //执行重载
+                                        table2.reload('LAY-posts-category-list'); //重载表格
+                                        layer.close(index); //执行关闭
+                                    }
+                                });
+
+                            });
+                        });
+                    }
+                });
+            }
+        };
+
+        $('.layui-btn.layuiadmin-btn-list').on('click', function () {
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+
+    });
+</script>

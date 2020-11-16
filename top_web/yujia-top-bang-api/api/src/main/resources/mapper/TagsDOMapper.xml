@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yujia.topbang.api.mapper.TagsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.yujia.topbang.api.entity.TagsDO">
+        <id column="id" property="id" />
+        <result column="type" property="type" />
+        <result column="tag_name" property="tagName" />
+        <result column="tag_code" property="tagCode" />
+        <result column="gmt_create" property="gmtCreate" />
+        <result column="gmt_modified" property="gmtModified" />
+        <result column="is_deleted" property="isDeleted" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, type, tag_name, tag_code, gmt_create, gmt_modified, is_deleted
+    </sql>
+
+</mapper>

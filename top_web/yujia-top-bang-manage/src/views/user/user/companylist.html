@@ -1,0 +1,86 @@
+<title>企业实名审核</title>
+
+<div class="layui-card layadmin-header">
+    <div class="layui-breadcrumb" lay-filter="breadcrumb">
+        <a lay-href="">主页</a>
+        <a><cite>用户</cite></a>
+        <a><cite>企业实名审核</cite></a>
+    </div>
+</div>
+
+<div class="layui-fluid">
+    <div class="layui-card">
+        <div class="layui-form layui-card-header layuiadmin-card-header-auto" lay-filter="layadmin-userfront-formlist">
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">用户ID</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="userId" placeholder="请输入" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">企业名</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="unitName" placeholder="请输入" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">姓名</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="name" placeholder="请输入" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <button class="layui-btn layuiadmin-btn-useradmin" lay-submit lay-filter="LAY-user-company-search">
+                        <i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-card-body">
+
+            <table id="LAY-user-company-list" lay-filter="LAY-user-company-list"></table>
+
+            <script type="text/html" id="table-user-company-imgTpl">
+                <img style="display: inline-block; width: 50%; height: 100%;" src={{ d.imgUrl }}>
+            </script>
+            <script type="text/html" id="table-user-card-justImgTpl">
+                <img style="display: inline-block; width: 50%; height: 100%;" src={{ d.justImgUrl }}>
+            </script>
+            <script type="text/html" id="table-user-card-backImgTpl">
+                <img style="display: inline-block; width: 50%; height: 100%;" src={{ d.backImgUrl }}>
+            </script>
+
+            <script type="text/html" id="LAY-user-card-list-tool">
+                {{#  if(d.status == 0){ }}
+                <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="audit"><i
+                        class="layui-icon layui-icon-edit"></i>审核</a>
+                {{#  } }}
+            </script>
+        </div>
+    </div>
+</div>
+
+<script>
+    layui.use(['useradmin', 'table2'], layui.factory('useradmin')).use(['admin', 'useradmin', 'table2'], function () {
+        var $ = layui.$
+            , table2 = layui.table2
+            , form = layui.form;
+
+        form.render(null, 'layadmin-userfront-formlist');
+
+        //监听搜索
+        form.on('submit(LAY-user-company-search)', function (data) {
+            var field = data.field;
+
+            //执行重载
+            table2.reload('LAY-user-company-list', {
+                page: {
+                    curr: 1
+                }
+                , where: field
+            });
+        });
+    });
+</script>

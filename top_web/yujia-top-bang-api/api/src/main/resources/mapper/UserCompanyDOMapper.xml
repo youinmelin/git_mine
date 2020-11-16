@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yujia.topbang.api.mapper.UserCompanyMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.yujia.topbang.api.entity.UserCompanyDO">
+        <id column="id" property="id" />
+        <result column="user_id" property="userId" />
+        <result column="unit_name" property="unitName" />
+        <result column="social_credit_code" property="socialCreditCode" />
+        <result column="reg_capital" property="regCapital" />
+        <result column="establish_date" property="establishDate" />
+        <result column="expiration_date" property="expirationDate" />
+        <result column="reg_address" property="regAddress" />
+        <result column="img_url" property="imgUrl" />
+        <result column="staff_size" property="staffSize" />
+        <result column="business_scope" property="businessScope" />
+        <result column="customer_base" property="customerBase" />
+        <result column="name" property="name" />
+        <result column="card_no" property="cardNo" />
+        <result column="just_img_url" property="justImgUrl" />
+        <result column="sign_org" property="signOrg" />
+        <result column="valid_start" property="validStart" />
+        <result column="valid_end" property="validEnd" />
+        <result column="back_img_url" property="backImgUrl" />
+        <result column="status" property="status" />
+        <result column="gmt_create" property="gmtCreate" />
+        <result column="gmt_modified" property="gmtModified" />
+        <result column="is_deleted" property="isDeleted" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, user_id, unit_name, social_credit_code, reg_capital, establish_date, expiration_date, reg_address, img_url, staff_size, business_scope, customer_base, name, card_no, just_img_url, sign_org, valid_start, valid_end, back_img_url, status, gmt_create, gmt_modified, is_deleted
+    </sql>
+
+</mapper>

@@ -1,0 +1,121 @@
+<title>Banner</title>
+
+<div class="layui-card layadmin-header">
+    <div class="layui-breadcrumb" lay-filter="breadcrumb">
+        <a lay-href="">主页</a>
+        <a><cite>轮播图</cite></a>
+        <a><cite>列表</cite></a>
+    </div>
+</div>
+
+<div class="layui-fluid">
+    <div class="layui-card">
+        <div class="layui-form layui-card-header layuiadmin-card-header-auto" lay-filter="app-content-list">
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">用户ID</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="userId" placeholder="请输入" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+<!--                <div class="layui-inline">-->
+<!--                    <label class="layui-form-label">标题</label>-->
+<!--                    <div class="layui-input-inline">-->
+<!--                        <input type="text" name="title" placeholder="请输入" autocomplete="off" class="layui-input">-->
+<!--                    </div>-->
+<!--                </div>-->
+
+                <div class="layui-inline">
+                    <button class="layui-btn layuiadmin-btn-list" lay-submit lay-filter="LAY-app-contlist-search">
+                        <i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-card-body">
+            <div style="padding-bottom: 10px;">
+                <button class="layui-btn layuiadmin-btn-list" data-type="add">添加</button>
+            </div>
+            <table id="LAY-banner-list" lay-filter="LAY-banner-list"></table>
+            <script type="text/html" id="imgTpl">
+                <img style="display: inline-block; width: 50%; height: 100%;" src={{ d.imgUrl }}>
+            </script>
+
+            <script type="text/html" id="table-banner-list">
+                {{#  if(d.status == 0){ }}
+                <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="audit"><i
+                        class="layui-icon layui-icon-edit"></i>审核</a>
+                {{#  } }}
+                <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit"><i
+                        class="layui-icon layui-icon-edit"></i>编辑</a>
+                <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del"><i
+                        class="layui-icon layui-icon-delete"></i>删除</a>
+            </script>
+        </div>
+    </div>
+</div>
+
+<script>
+    layui.use(['banner', 'table2'], layui.factory('banner')).use(['admin', 'banner'], function () {
+        var $ = layui.$
+            , admin = layui.admin
+            , view = layui.view
+            , table2 = layui.table2
+            , form = layui.form;
+
+        form.render(null, 'app-content-list');
+
+        //监听搜索
+        form.on('submit(LAY-app-contlist-search)', function (data) {
+            var field = data.field;
+
+            //执行重载
+            table2.reload('LAY-banner-list', {
+                where: field
+            });
+        });
+
+        var active = {
+            //添加
+            add: function (othis) {
+                admin.popup({
+                    title: '添加Banner'
+                    , area: ['550px', '750px']
+                    , id: 'LAY-popup-content-add'
+                    , success: function (layero, index) {
+                        view(this.id).render('banner/listform').done(function () {
+                            layer.load();
+                            form.render(null, 'layuiadmin-form-banner');
+
+                            //监听提交
+                            form.on('submit(LAY-banner-submit)', function (data) {
+                                var field = data.field; //获取提交的字段
+
+                                //提交 Ajax 成功后，关闭当前弹层并重载表格
+                                admin.req({
+                                    url: layui.setter.request.url + '/mgr/banner/bannerSave'
+                                    , data: JSON.stringify(field)
+                                    , dataType: 'json'
+                                    , contentType: "application/json"
+                                    , type: 'POST'
+                                    , success: function (res) {
+                                        //执行重载
+                                        table2.reload('LAY-banner-list'); //重载表格
+                                        layer.close(index); //执行关闭
+                                    }
+                                });
+                            });
+                        });
+                    }
+                });
+            }
+        };
+
+        $('.layui-btn.layuiadmin-btn-list').on('click', function () {
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+
+    });
+</script>

@@ -1,0 +1,146 @@
+<div class="layui-form" lay-filter="layuiadmin-form-role" style="padding: 20px 30px 0 0;">
+    <div class="layui-form-item">
+        <label class="layui-form-label">分类名</label>
+        <div class="layui-input-inline">
+            <script type="text/html" template>
+                <input type="text" name="name" value="{{ d.params.name || '' }}" lay-verify="required"
+                       placeholder="请输入" autocomplete="off" class="layui-input">
+            </script>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">别名</label>
+        <div class="layui-input-inline">
+            <script type="text/html" template>
+                <input type="text" name="alias" value="{{ d.params.alias || '' }}" lay-verify="required"
+                       placeholder="请输入" autocomplete="off" class="layui-input">
+            </script>
+        </div>
+        <div class="layui-form-mid layui-word-aux">“别名”是在URL中使用的别称，它可以令URL更美观。通常使用小写，只能包含字母，数字和连字符（-）。</div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">类型</label>
+        <div class="layui-input-inline">
+            <select id="type" name="type">
+                <option value="0">纯文字</option>
+                <option value="1">独立页面</option>
+                <option value="2">图文</option>
+                <option value="3">图文带标签</option>
+                <option value="4">商城类</option>
+                <option value="5">下载类</option>
+            </select>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">排列方式</label>
+        <div class="layui-input-inline">
+            <select id="array_mode" name="array_mode">
+                <option value="0">横排</option>
+                <option value="1">竖排</option>
+            </select>
+        </div>
+        <div class="layui-form-mid layui-word-aux">仅对菜单类型生效</div>
+    </div>
+    <script type="text/html" template>
+        {{#  if(d.params.id){ }}
+        {{#  } else { }}
+        <div class="layui-form-item">
+            <label class="layui-form-label">父级目录</label>
+            <div class="layui-input-inline">
+                <select id="parent_id" name="parent_id">
+                </select>
+            </div>
+        </div>
+        {{#  } }}
+    </script>
+    <div class="layui-form-item">
+        <label class="layui-form-label">SEO Title</label>
+        <div class="layui-input-inline">
+            <script type="text/html" template>
+                <input type="text" name="seo_title" value="{{ d.params.seo_title || '' }}" lay-verify="required"
+                       placeholder="自定义SEO标题" autocomplete="off" class="layui-input">
+            </script>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">SEO Description</label>
+        <div class="layui-input-inline">
+            <script type="text/html" template>
+                <input type="text" name="seo_description" value="{{ d.params.seo_description || '' }}"
+                       lay-verify="required"
+                       placeholder="自定义SEO简介" autocomplete="off" class="layui-input">
+            </script>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">SEO Keywords</label>
+        <div class="layui-input-inline">
+            <script type="text/html" template>
+                <input type="text" name="seo_keywords" value="{{ d.params.seo_keywords || '' }}" lay-verify="required"
+                       placeholder="自定义SEO搜索关键词" autocomplete="off" class="layui-input">
+            </script>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label"></label>
+        <div class="layui-input-inline">
+            <input type="button" lay-submit lay-filter="LAY-posts-category-submit" value="确认" class="layui-btn">
+        </div>
+    </div>
+</div>
+
+<script type="text/html" template lay-done="layui.data.sendParams(d.params)">
+</script>
+
+<script>
+    layui.data.sendParams = function (params) {
+        layui.use(['admin', 'form'], function () {
+            var $ = layui.$
+                , admin = layui.admin
+                , form = layui.form;
+
+            // 设置默认选中
+            if (params.type) {
+                $("select[name='type']").val(params.type);
+            } else {
+                $("select[name='type']").val(0);
+            }
+            layui.form.render("select");
+
+            if (params.array_mode) {
+                $("select[name='array_mode']").val(params.array_mode);
+            } else {
+                $("select[name='array_mode']").val(0);
+            }
+            layui.form.render("select");
+
+            admin.req({
+                url: layui.setter.request.url + '/mgr/posts/getCategory'
+                , dataType: 'json'
+                , contentType: "application/json"
+                , method: 'GET'
+                , success: function (data) {
+                    // 先要添加一个无，默认根目录
+                    $("select[name='parent_id']").append(new Option('无', 0));
+                    $.each(data.data, function (index, item) {
+                        // 下拉菜单里添加元素
+                        $("select[name='parent_id']").append(new Option(item.name, item.id));
+                    });
+                    // 设置默认选中
+                    if (params.parent_id) {
+                        // 判断是否根目录
+                        if (params.parent_id === 1) {
+                            $("select[name='parent_id']").val(0);
+                        } else {
+                            $("select[name='parent_id']").val(params.parent_id);
+                        }
+                    } else {
+                        $("select[name='parent_id']").val(0);
+                    }
+                    layui.form.render("select");
+                }
+            });
+
+        });
+    };
+</script>

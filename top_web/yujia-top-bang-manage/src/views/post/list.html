@@ -1,0 +1,100 @@
+<title>文章列表</title>
+
+<div class="layui-card layadmin-header">
+    <div class="layui-breadcrumb" lay-filter="breadcrumb">
+        <a lay-href="">主页</a>
+        <a><cite>文章管理</cite></a>
+        <a><cite>列表</cite></a>
+    </div>
+</div>
+
+<div class="layui-fluid">
+    <div class="layui-card">
+        <div class="layui-form layui-card-header layuiadmin-card-header-auto" lay-filter="layadmin-blog-posts-formlist">
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">标题</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" placeholder="请输入" autocomplete="off"
+                               class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <button class="layui-btn layuiadmin-btn-admin" lay-submit lay-filter="LAY-deal-list-search">
+                        <i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-card-body">
+            <div style="padding-bottom: 10px;">
+                <button class="layui-btn layuiadmin-btn-admin" data-type="batchdel">删除</button>
+                <button class="layui-btn layuiadmin-btn-list" lay-href="post/listform">添加</button>
+            </div>
+
+            <table id="LAY-posts-list" lay-filter="LAY-posts-list"></table>
+
+            <script type="text/html" id="switchTpl">
+                <input type="checkbox" name="is_recommend" value="{{d.id}}" lay-skin="switch" lay-text="是|否"
+                       lay-filter="is_recommend" {{ d.is_recommend== 1 ? 'checked' : '' }}>
+            </script>
+
+            <script type="text/html" id="table-posts-list">
+                <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit"><i
+                        class="layui-icon layui-icon-edit"></i>编辑</a>
+                <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del"><i
+                        class="layui-icon layui-icon-delete"></i>删除</a>
+            </script>
+        </div>
+    </div>
+</div>
+
+<script>
+    layui.use(['posts', 'table2'], layui.factory('posts')).use(['admin', 'posts'], function () {
+        var $ = layui.$
+            , admin = layui.admin
+            , view = layui.view
+            , table2 = layui.table2
+            , form = layui.form;
+
+        form.render(null, 'layadmin-posts-formlist');
+
+        //监听搜索
+        form.on('submit(LAY-deal-list-search)', function (data) {
+            var field = data.field;
+
+            //执行重载
+            table2.reload('LAY-posts-list', {
+                page: {
+                    curr: 1
+                }
+                , where: field
+            })
+            ;
+        });
+
+        //监听推荐操作
+        form.on('switch(is_recommend)', function (obj) {
+            // 增加遮罩
+            layer.load();
+            // 修改推荐
+            var field = new Object(); //获取提交的字段
+            field.id = this.value;
+            field.is_recommend = obj.elem.checked === true ? 1 : 0;
+
+            //提交 Ajax 成功后，关闭当前弹层并重载表格
+            admin.req({
+                url: layui.setter.request.url + '/mgr/posts/updateIsRecommend'
+                , data: JSON.stringify(field)
+                , dataType: 'json'
+                , contentType: "application/json"
+                , type: 'POST'
+                , done: function () {
+                    layer.msg('修改成功');
+                    layer.closeAll('loading');
+                }
+            });
+        });
+    });
+</script>

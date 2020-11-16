@@ -1,0 +1,5 @@
+# 激活配置文件, dev:生产环境, test:测试环境
+# https://blog.csdn.net/qq_35814269/article/details/78531316   springboot多配置文件，多个application
+spring:
+  profiles:
+    active: dev

@@ -1,0 +1,436 @@
+<title>角色管理</title>
+
+<div class="layui-card layadmin-header">
+    <div class="layui-breadcrumb" lay-filter="breadcrumb">
+        <a lay-href="">主页</a>
+        <a><cite>用户</cite></a>
+        <a><cite>权限菜单管理</cite></a>
+    </div>
+</div>
+
+<div class="layui-fluid">
+    <div class="layui-card">
+        <!--<div class="layui-form layui-card-header layuiadmin-card-header-auto"-->
+        <!--lay-filter="layadmin-useradminrole-formlist">-->
+        <!--<div class="layui-form-item">-->
+        <!--<div class="layui-inline">-->
+        <!--角色筛选-->
+        <!--</div>-->
+        <!--<div class="layui-inline">-->
+        <!--<select name="rolename" lay-filter="LAY-user-adminrole-type">-->
+        <!--<option value="-1">全部角色</option>-->
+        <!--<option value="0">管理员</option>-->
+        <!--<option value="1">超级管理员</option>-->
+        <!--<option value="2">纠错员</option>-->
+        <!--<option value="3">采购员</option>-->
+        <!--<option value="4">推销员</option>-->
+        <!--<option value="5">运营人员</option>-->
+        <!--<option value="6">编辑</option>-->
+        <!--</select>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <div class="layui-card-body">
+            <div style="padding-bottom: 10px;">
+                <!--<button class="layui-btn layuiadmin-btn-role" data-type="batchdel">删除</button>-->
+                <button class="layui-btn layuiadmin-btn-role" data-type="add">添加根目录</button>
+            </div>
+
+            <!-- 这是默认的列表 -->
+            <!--<table id="LAY-user-back-role" lay-filter="LAY-user-back-role"></table>-->
+
+            <!-- 这里是那个权限树 -->
+            <div class="dBody">
+                <table class="layui-hidden" id="treeTable" lay-filter="treeTable"></table>
+            </div>
+
+
+            <!--<script type="text/html" id="buttonTpl">-->
+            <!--{{#  if(d.check == true){ }}-->
+            <!--<button class="layui-btn layui-btn-xs">已审核</button>-->
+            <!--{{#  } else { }}-->
+            <!--<button class="layui-btn layui-btn-primary layui-btn-xs">未审核</button>-->
+            <!--{{#  } }}-->
+            <!--</script>-->
+            <!--<script type="text/html" id="table-useradmin-admin">-->
+            <!--<a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit"><i-->
+            <!--class="layui-icon layui-icon-edit"></i>编辑</a>-->
+            <!--<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del"><i-->
+            <!--class="layui-icon layui-icon-delete"></i>删除</a>-->
+            <!--</script>-->
+        </div>
+    </div>
+</div>
+
+<script>
+    layui.use('useradmin', layui.factory('useradmin')).use(['admin', 'useradmin', 'table'], function () {
+        var $ = layui.$
+            , admin = layui.admin
+            , view = layui.view
+            , table = layui.table
+            , form = layui.form;
+
+        form.render(null, 'layadmin-useradminrole-formlist');
+
+        //搜索角色
+        form.on('select(LAY-user-adminrole-type)', function (data) {
+            //执行重载
+            table.reload('LAY-user-back-role', {
+                where: {
+                    role: data.value
+                }
+            });
+        });
+
+        //事件
+        var active = {
+            batchdel: function () {
+                var checkStatus = table.checkStatus('LAY-user-back-role')
+                    , checkData = checkStatus.data; //得到选中的数据
+                if (checkData.length === 0) {
+                    return layer.msg('请选择数据');
+                }
+
+                layer.confirm('确定删除吗？', function (index) {
+
+                    //执行 Ajax 后重载
+                    /*
+                    admin.req({
+                      url: 'xxx'
+                      //,……
+                    });
+                    */
+                    table.reload('LAY-user-back-role');
+                    layer.msg('已删除');
+                });
+            },
+            add: function () {
+                admin.popup({
+                    title: '添加新菜单'
+                    , area: ['500px', '800px']
+                    , id: 'LAY-popup-user-add'
+                    , success: function (layero, index) {
+                        view(this.id).render('adminuser/menuform').done(function () {
+                            form.render(null, 'layuiadmin-form-role');
+
+                            //监听提交
+                            form.on('submit(LAY-user-role-submit)', function (data) {
+                                var field = data.field; //获取提交的字段
+                                //提交 Ajax 成功后，关闭当前弹层并重载表格
+                                admin.req({
+                                    url: layui.setter.request.url + '/mgr/menu/insert' //实际使用请改成服务端真实接口
+                                    , data: JSON.stringify(field)
+                                    , dataType: 'json'
+                                    , contentType: "application/json"
+                                    , type: 'POST'
+                                    , success: function (res) {
+                                        layer.msg('添加成功');
+                                        // layui.table.reload('treeTable'); //重载表格
+                                        layer.close(index); //执行关闭
+                                    }
+                                });
+
+                            });
+                        });
+                    }
+                });
+            }
+        };
+        $('.layui-btn.layuiadmin-btn-role').on('click', function () {
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+    });
+</script>
+
+
+<!-- 这下面是新东西 -->
+
+<script>
+    var editObj = null, ptable = null, treeGrid = null, tableId = 'treeTable', layer = null;
+    layui.config({}).use(['jquery', 'treeGrid', 'layer', 'treeGrid'], function () {
+        treeGrid = layui.treeGrid;//很重要
+        layer = layui.layer;
+        ptable = treeGrid.render({
+            id: tableId
+            , elem: '#' + tableId
+            // , url: './json/treeData.json'
+            , url: layui.setter.request.url + '/mgr/menu/list/0'
+            , dataType: 'json'
+            , contentType: "application/json"
+            , type: 'POST'
+            , method: 'GET'
+            , cellMinWidth: 100
+            , idField: 'id'//必須字段
+            , treeId: 'id'//树形id字段名称
+            , treeUpId: 'parentId'//树形父id字段名称
+            , treeShowName: 'title'//以树形式显示的字段
+            , heightRemove: [".dHead", 10]//不计算的高度,表格设定的是固定高度，此项不生效
+            , height: '100%'
+            , isFilter: false
+            , iconOpen: false//是否显示图标【默认显示】
+            , isOpenDefault: false//节点默认是展开还是折叠【默认展开】
+            , loading: true
+            , isPage: false
+            , cols: [[
+                {type: 'numbers'}
+                // , {type: 'radio'}// 单选
+                // , {type: 'checkbox', sort: true}// 复选
+                , {field: 'title', width: 300, title: '菜单名称', edit: 'text', sort: false}// 加了sort则支持排序
+                , {field: 'id', width: 100, title: 'id', sort: false}
+                , {field: 'parentId', width: 100, title: '父级ID', sort: false}
+                , {
+                    field: 'type', width: 60, title: '类型', align: 'center'
+                    , templet: function (d) {
+                        if (d.type === 0) {
+                            return '菜单';
+                        } else (d.type === 1)
+                        {
+                            return '按钮';
+                        }
+                    }
+                }
+                , {field: 'description', width: 200, title: '描述', sort: false}
+                , {
+                    width: 250, title: '操作', align: 'right', fixed: 'right'/*toolbar: '#barDemo'*/
+                    , templet: function (d) {
+                        var addBtn = '';
+                        if (d.type === 0) {
+                            addBtn = '<a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="add"><i class="layui-icon layui-icon-add-1"></i>添加子级</a>';
+                        }
+                        var updateBtn = '<a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit"><i class="layui-icon layui-icon-edit"></i>编辑</a>';
+                        var delBtn = '<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del"><i class="layui-icon layui-icon-delete"></i>删除</a>';
+                        return addBtn + updateBtn + delBtn;
+                    }
+                }
+            ]]
+            , parseData: function (res) {//数据加载后回调
+                return res;
+            }
+            , onClickRow: function (index, o) {
+                // console.log(index, o, "单击！");
+            }
+            , onDblClickRow: function (index, o) {
+                // console.log(index, o, "双击");
+            }
+            , onCheck: function (obj, checked, isAll) {//复选事件
+                console.log(obj, checked, isAll, "复选");
+            }
+            , onRadio: function (obj) {//单选事件
+                console.log(obj, "单选");
+            }
+        });
+
+        // 监听操作栏
+        treeGrid.on('tool(' + tableId + ')', function (obj) {
+            if (obj.event === 'del') {//删除行
+                del(obj);
+            } else if (obj.event === "add") {//添加行
+                add(obj);
+            } else if (obj.event === "edit") {// 修改行
+                edit(obj);
+            }
+        });
+    });
+
+    // 删除
+    function del(obj) {
+        layer.confirm("你确定删除数据吗？如果存在下级节点则一并删除，此操作不能撤销！", {icon: 3, title: '提示'},
+            function (index) {//确定回调
+                console.log(obj);
+                //提交 Ajax 成功后，关闭当前弹层并重载表格
+                layui.admin.req({
+                    url: layui.setter.request.url + '/mgr/menu/deleteMenu' //实际使用请改成服务端真实接口
+                    , data: JSON.stringify(obj.data)
+                    , dataType: 'json'
+                    , contentType: "application/json"
+                    , type: 'DELETE'
+                    , success: function (res) {
+                        obj.del();
+                        layer.close(index);
+                    }
+                });
+            }, function (index) {//取消回调
+                layer.close(index);
+            }
+        );
+    }
+
+    var i = 1000000;
+
+    //添加
+    function add(pObj) {
+        // var pdata = pObj ? pObj.data : null;
+        // var param = {};
+        // param.name = '水果' + Math.random();
+        // param.id = ++i;
+        // param.pId = pdata ? pdata.id : null;
+        // treeGrid.addRow(tableId, pdata ? pdata[treeGrid.config.indexName] + 1 : 0, param);
+        layui.admin.popup({
+            title: '添加新菜单'
+            , area: ['500px', '800px']
+            , id: 'LAY-popup-user-add'
+            , success: function (layero, index) {
+                layui.view(this.id).render('adminuser/menuform').done(function () {
+                    layui.form.render(null, 'layuiadmin-form-role');
+                    //监听提交
+                    layui.form.on('submit(LAY-user-role-submit)', function (data) {
+                        var field = data.field; //获取提交的字段
+                        // 判断当前层级和准备提交的type，如果是三级或以上，则只能添加按钮
+                        if (pObj.data.lay_level >= 3 && field.type === '0') {
+                            layer.msg('三级目录或以上只能添加按钮');
+                            return false;
+                        }
+                        // 新增一个父级ID
+                        field.parentId = pObj ? pObj.data.id : 0;
+                        // 新增当前层级
+                        field.level = pObj ? pObj.data.lay_level + 1 : 1;
+                        //提交 Ajax 成功后，关闭当前弹层并重载表格
+                        layui.admin.req({
+                            url: layui.setter.request.url + '/mgr/menu/insert' //实际使用请改成服务端真实接口
+                            , data: JSON.stringify(field)
+                            , dataType: 'json'
+                            , contentType: "application/json"
+                            , type: 'POST'
+                            , success: function (res) {
+                                layer.msg('添加成功');
+                                // 新增子级
+                                var pdata = pObj ? pObj.data : null;
+                                var param = {};
+                                param.title = field.title;
+                                param.id = res.data;
+                                param.parentId = field.parentId;
+                                param.type = parseInt(field.type);
+                                param.description = field.description;
+                                treeGrid.addRow(tableId, pdata ? pdata[treeGrid.config.indexName] + 1 : 0, param);
+
+                                layer.close(index); //执行关闭
+                            }
+                        });
+
+                    });
+                });
+            }
+        });
+    }
+
+    // 编辑
+    function edit(pObj) {
+        // var pdata = pObj ? pObj.data : null;
+        // var param = {};
+        // param.name = '水果' + Math.random();
+        // param.id = ++i;
+        // param.pId = pdata ? pdata.id : null;
+        // treeGrid.addRow(tableId, pdata ? pdata[treeGrid.config.indexName] + 1 : 0, param);
+        layui.admin.popup({
+            title: '编辑菜单'
+            , area: ['500px', '800px']
+            , id: 'LAY-popup-user-add'
+            , success: function (layero, index) {
+                layui.view(this.id).render('adminuser/menuform').done(function () {
+                    layui.form.render(null, 'layuiadmin-form-role');
+                    //监听提交
+                    layui.form.on('submit(LAY-user-role-submit)', function (data) {
+                        var field = data.field; //获取提交的字段
+                        // 判断当前层级和准备提交的type，如果是三级或以上，则只能添加按钮
+                        if (pObj.data.lay_level >= 3 && field.type === '0') {
+                            layer.msg('三级目录或以上只能添加按钮');
+                            return false;
+                        }
+                        // 新增一个父级ID
+                        field.parentId = pObj ? pObj.data.id : 0;
+                        // 新增当前层级
+                        field.level = pObj ? pObj.data.lay_level + 1 : 1;
+                        //提交 Ajax 成功后，关闭当前弹层并重载表格
+                        // layui.admin.req({
+                        //     url: layui.setter.request.url + '/mgr/menu/insert' //实际使用请改成服务端真实接口
+                        //     , data: JSON.stringify(field)
+                        //     , dataType: 'json'
+                        //     , contentType: "application/json"
+                        //     , type: 'POST'
+                        //     , success: function (res) {
+                        //         layer.msg('添加成功');
+                        //         // 新增子级
+                        //         var pdata = pObj ? pObj.data : null;
+                        //         var param = {};
+                        //         param.name = field.name;
+                        //         param.id = res.data;
+                        //         param.parentId = field.parentId;
+                        //         param.type = parseInt(field.type);
+                        //         param.description = field.description;
+                        //         treeGrid.addRow(tableId, pdata ? pdata[treeGrid.config.indexName] + 1 : 0, param);
+                        //
+                        //         layer.close(index); //执行关闭
+                        //     }
+                        // });
+
+                    });
+                });
+            }
+        });
+    }
+
+    function print() {
+        console.log(treeGrid.cache[tableId]);
+        var loadIndex = layer.msg("对象已打印，按F12，在控制台查看！", {
+            time: 3000
+            , offset: 'auto'//顶部
+            , shade: 0
+        });
+    }
+
+    function openorclose() {
+        var map = treeGrid.getDataMap(tableId);
+        var o = map['102'];
+        treeGrid.treeNodeOpen(tableId, o, !o[treeGrid.config.cols.isOpen]);
+    }
+
+
+    function openAll() {
+        var treedata = treeGrid.getDataTreeList(tableId);
+        treeGrid.treeOpenAll(tableId, !treedata[0][treeGrid.config.cols.isOpen]);
+    }
+
+    function getCheckData() {
+        var checkStatus = treeGrid.checkStatus(tableId)
+            , data = checkStatus.data;
+        layer.alert(JSON.stringify(data));
+    }
+
+    function radioStatus() {
+        var data = treeGrid.radioStatus(tableId)
+        layer.alert(JSON.stringify(data));
+    }
+
+    function getCheckLength() {
+        var checkStatus = treeGrid.checkStatus(tableId)
+            , data = checkStatus.data;
+        layer.msg('选中了：' + data.length + ' 个');
+    }
+
+    function reload() {
+        treeGrid.reload(tableId, {
+            page: {
+                curr: 1
+            }
+        });
+    }
+
+    function query() {
+        treeGrid.query(tableId, {
+            where: {
+                name: 'sdfsdfsdf'
+            }
+        });
+    }
+
+    function test() {
+        console.log(treeGrid.cache[tableId], treeGrid.getClass(tableId));
+
+
+        /*var map=treeGrid.getDataMap(tableId);
+        var o= map['102'];
+        o.name="更新";
+        treeGrid.updateRow(tableId,o);*/
+    }
+</script>

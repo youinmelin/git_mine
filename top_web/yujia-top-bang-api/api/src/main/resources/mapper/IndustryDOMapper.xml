@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yujia.topbang.api.mapper.IndustryMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.yujia.topbang.api.entity.IndustryDO">
+        <id column="id" property="id" />
+        <result column="code" property="code" />
+        <result column="name" property="name" />
+        <result column="content" property="content" />
+        <result column="l_id" property="lId" />
+        <result column="r_id" property="rId" />
+        <result column="parent_id" property="parentId" />
+        <result column="current_level" property="currentLevel" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, code, name, content, l_id, r_id, parent_id, current_level
+    </sql>
+
+</mapper>

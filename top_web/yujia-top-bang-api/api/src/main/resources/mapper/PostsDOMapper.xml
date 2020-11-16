@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yujia.topbang.api.mapper.PostsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.yujia.topbang.api.entity.PostsDO">
+        <id column="id" property="id" />
+        <result column="title" property="title" />
+        <result column="category_id" property="categoryId" />
+        <result column="type" property="type" />
+        <result column="is_top" property="isTop" />
+        <result column="is_recommend" property="isRecommend" />
+        <result column="img_url" property="imgUrl" />
+        <result column="description" property="description" />
+        <result column="content" property="content" />
+        <result column="seo_title" property="seoTitle" />
+        <result column="seo_description" property="seoDescription" />
+        <result column="seo_keywords" property="seoKeywords" />
+        <result column="publish_at" property="publishAt" />
+        <result column="sort" property="sort" />
+        <result column="status" property="status" />
+        <result column="gmt_create" property="gmtCreate" />
+        <result column="gmt_modified" property="gmtModified" />
+        <result column="is_deleted" property="isDeleted" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, title, category_id, type, is_top, is_recommend, img_url, description, content, seo_title, seo_description, seo_keywords, publish_at, sort, status, gmt_create, gmt_modified, is_deleted
+    </sql>
+
+</mapper>

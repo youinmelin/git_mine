@@ -1,0 +1,31 @@
+<div class="layui-form" lay-filter="layuiadmin-form-user-vip" style="padding: 20px 0 0 0;">
+    <div class="layui-form-item">
+        <label class="layui-form-label">到期时间</label>
+        <div class="layui-input-inline">
+            <script type="text/html" template>
+                <input type="text" id="gmtEnd" name="gmtEnd" value="{{ d.params.gmtEnd || '' }}"
+                       placeholder="yyyy-MM-dd HH:mm:ss" autocomplete="off" class="layui-input">
+            </script>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label"></label>
+        <div class="layui-input-inline">
+            <input type="button" lay-submit lay-filter="LAY-user-vip-submit" value="确认" class="layui-btn">
+        </div>
+    </div>
+</div>
+
+<script>
+    layui.use(['admin', 'form', 'laydate'], function () {
+        var $ = layui.$
+            , form = layui.form
+            , laydate = layui.laydate
+        ;
+
+        laydate.render({
+            elem: '#gmtEnd'
+            , type: 'datetime'
+        });
+    });
+</script>

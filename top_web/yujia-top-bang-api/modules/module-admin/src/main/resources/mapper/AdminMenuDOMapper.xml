@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.forgetfulr.admin.mapper.AdminMenuMapper">
+
+    <resultMap id="adminMenuMap" type="com.forgetfulr.admin.entity.AdminMenuDO">
+        <id property="id" column="id"/>
+        <result property="parentId" column="parent_id"/>
+        <result property="name" column="name"/>
+        <result property="type" column="type"/>
+        <result property="title" column="title"/>
+        <result property="description" column="description"/>
+        <result property="routeIcon" column="route_icon"/>
+        <result property="routeUrl" column="route_url"/>
+        <result property="requestUrl" column="request_url"/>
+        <result property="requestMethod" column="request_method"/>
+        <result property="sort" column="sort"/>
+        <result property="spread" column="spread"/>
+        <result property="level" column="level"/>
+        <result property="gmtCreate" column="gmt_create"/>
+        <result property="gmtModified" column="gmt_modified"/>
+        <result property="isDeleted" column="is_deleted"/>
+    </resultMap>
+
+    <!-- 批量查询 -->
+    <select id="batchSelect" resultMap="adminMenuMap">
+        SELECT
+        id, parent_id, name, type, title, description, route_icon, route_url, request_url, request_method, sort, spread,
+        level, gmt_create, gmt_modified, is_deleted
+        FROM admin_menu
+        WHERE is_deleted=0 and id in
+        <foreach collection="list" item="list" open="(" separator="," close=")">
+            #{list}
+        </foreach>
+    </select>
+
+</mapper>

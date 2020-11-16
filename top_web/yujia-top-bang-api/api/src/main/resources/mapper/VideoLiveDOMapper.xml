@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yujia.topbang.api.mapper.VideoLiveMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.yujia.topbang.api.entity.VideoLiveDO">
+        <id column="id" property="id" />
+        <result column="user_id" property="userId" />
+        <result column="title" property="title" />
+        <result column="platform_id" property="platformId" />
+        <result column="platform_name" property="platformName" />
+        <result column="live_link" property="liveLink" />
+        <result column="video_img_url" property="videoImgUrl" />
+        <result column="industry_id" property="industryId" />
+        <result column="industry_name" property="industryName" />
+        <result column="price" property="price" />
+        <result column="is_custom" property="isCustom" />
+        <result column="buy_url" property="buyUrl" />
+        <result column="download_url" property="downloadUrl" />
+        <result column="content" property="content" />
+        <result column="status" property="status" />
+        <result column="gmt_create" property="gmtCreate" />
+        <result column="gmt_modified" property="gmtModified" />
+        <result column="is_deleted" property="isDeleted" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, user_id, title, platform_id, platform_name, live_link, video_img_url, industry_id, industry_name, price, is_custom, buy_url, download_url, content, status, gmt_create, gmt_modified, is_deleted
+    </sql>
+
+</mapper>

@@ -1,0 +1,153 @@
+<title>联系我们</title>
+
+<div class="layui-card layadmin-header">
+    <div class="layui-breadcrumb" lay-filter="breadcrumb">
+        <a lay-href="">主页</a>
+        <a><cite>设置</cite></a>
+        <a><cite>联系我们</cite></a>
+    </div>
+</div>
+
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header">联系我们</div>
+                <div class="layui-card-body" pad15>
+
+                    <div class="layui-form" wid100 lay-filter="">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">微信二维码</label>
+                            <div class="layui-input-inline">
+                                <input id="wxMpImg" name="wxMpImg" placeholder="图片地址"
+                                       value="" class="layui-input">
+                            </div>
+                            <div class="layui-input-inline layui-btn-container" style="width: auto;">
+                                <button type="button" class="layui-btn layui-btn-primary" id="LAY_wxMpImgUpload">
+                                    <i class="layui-icon">&#xe67c;</i>上传图片
+                                </button>
+                                <button class="layui-btn layui-btn-primary" layadmin-event="LAY_wxMpImg_Preview">查看图片
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">合作热线</label>
+                            <div class="layui-input-block">
+                                <input type="text" id="cooperationHotline" name="cooperationHotline" autocomplete="off"
+                                       class="layui-input">
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">销售热线</label>
+                            <div class="layui-input-block">
+                                <input type="text" id="salesHotline" name="salesHotline" autocomplete="off"
+                                       class="layui-input">
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">客服热线</label>
+                            <div class="layui-input-block">
+                                <input type="text" id="customerServiceHotline" name="customerServiceHotline"
+                                       autocomplete="off"
+                                       class="layui-input">
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">Email</label>
+                            <div class="layui-input-block">
+                                <input type="text" id="email" name="email" autocomplete="off"
+                                       class="layui-input">
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <div class="layui-input-block">
+                                <button class="layui-btn layui-btn-normal" lay-submit lay-filter="setContactus">确认保存
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    layui.use(['form', 'upload'], function () {
+        var $ = layui.$
+            , form = layui.form
+            , admin = layui.admin
+            , upload = layui.upload;
+
+        // 微信
+        var wxMpImg = $('#wxMpImg');
+        upload.render({
+            url: layui.setter.request.url + '/mgr/upload/oss/image' //上传接口
+            , elem: '#LAY_wxMpImgUpload'
+            , headers: {
+                accessToken: layui.data([layui.setter.tableName])[layui.setter.request.tokenName]
+            }
+            , acceptMime: 'image/*'
+            , field: 'file'
+            , done: function (res) {
+                wxMpImg.val(res.data.src);
+            }
+        });
+        // 支付宝查看
+        admin.events.LAY_wxMpImg_Preview = function (othis) {
+            var src = wxMpImg.val();
+            layer.photos({
+                photos: {
+                    "title": "查看图片" //相册标题
+                    , "data": [{
+                        "src": src //原图地址
+                    }]
+                }
+                , shade: 0.01
+                , closeBtn: 1
+                , anim: 5
+            });
+        };
+
+        // 联系我们
+        form.on('submit(setContactus)', function (obj) {
+            admin.req({
+                url: layui.setter.request.url + '/mgr/webOption/setOption/setContactus'
+                , data: JSON.stringify(obj.field)
+                , dataType: 'json'
+                , contentType: "application/json"
+                , type: 'POST'
+                , success: function () {
+                    layer.msg("修改成功");
+                }
+            });
+            return false;
+        });
+
+        // 由于这里加载太快了。导致控件还没显示出现就加载了。会出现设置无效的问题。这里进行一个延时操作
+        // setTimeout(function () {
+        admin.req({
+            url: layui.setter.request.url + '/mgr/webOption/getOption/setContactus'
+            , dataType: 'json'
+            , contentType: "application/json"
+            , method: 'GET'
+            , success: function (data) {
+                for (var i = 0; i < data.data.length; i++) {
+                    if (data.data[i]['code'] !== "file") {
+                        document.getElementById(data.data[i]['code']).value = data.data[i]['value'];
+                    }
+                }
+                //重新渲染显示效果
+                layui.form.render();
+            }
+        });
+        // }, 1000);
+
+    });
+</script>

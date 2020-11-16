@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.forgetfulr.admin.mapper.AdminRoleMenuMapper">
+
+    <resultMap id="adminRoleMenuMap" type="com.forgetfulr.admin.entity.AdminRoleMenuDO">
+        <id property="id" column="id"/>
+        <result property="roleId" column="role_id"/>
+        <result property="menuId" column="menu_id"/>
+        <result property="gmtCreate" column="gmt_create"/>
+        <result property="gmtModified" column="gmt_modified"/>
+        <result property="isDeleted" column="is_deleted"/>
+    </resultMap>
+
+    <!-- 查询角色菜单IDs -->
+    <select id="getMenuIds" resultType="Long" parameterType="Long">
+        SELECT
+        menu_id
+        FROM admin_role_menu
+        WHERE role_id=#{roleId} and is_deleted=0
+    </select>
+
+    <!-- 批量更新 -->
+    <update id="batchDelete">
+        UPDATE admin_role_menu
+        SET gmt_modified=now(),is_deleted=1
+        WHERE is_deleted=0 and role_id=#{roleId} and menu_id not in
+        <foreach collection="list" item="list" open="(" separator="," close=")">
+            #{list}
+        </foreach>
+    </update>
+
+    <!-- 批量查询 -->
+    <select id="batchSelect" resultMap="adminRoleMenuMap">
+        SELECT
+        id, role_id, menu_id, gmt_create, gmt_modified, is_deleted
+        FROM admin_role_menu
+        WHERE is_deleted=0 and role_id=#{roleId} and menu_id in
+        <foreach collection="list" item="list" open="(" separator="," close=")">
+            #{list}
+        </foreach>
+    </select>
+
+    <!-- 批量插入 -->
+    <insert id="batchInsert" parameterType="com.forgetfulr.admin.entity.AdminRoleMenuDO">
+        INSERT INTO admin_role_menu ( role_id, menu_id, gmt_create, gmt_modified, is_deleted )
+        VALUES
+        <foreach collection="list" item="list" separator=",">
+            (#{list.roleId},#{list.menuId},now(),now(),0)
+        </foreach>
+    </insert>
+
+    <!-- 批量查询已删除数据 -->
+    <select id="batchRecovery" resultType="com.forgetfulr.admin.entity.AdminRoleMenuDO">
+        UPDATE admin_role_menu
+        SET gmt_modified=now(),is_deleted=0
+        WHERE is_deleted=1 and role_id=#{roleId} and menu_id in
+        <foreach collection="list" item="list" open="(" separator="," close=")">
+            #{list}
+        </foreach>
+    </select>
+
+</mapper>

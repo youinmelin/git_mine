@@ -1,0 +1,125 @@
+<div class="layui-form" lay-filter="layuiadmin-form-admin" style="padding: 20px 30px 0 0;">
+    <div class="layui-form-item">
+        <label class="layui-form-label">登录名</label>
+        <div class="layui-input-inline">
+            <script type="text/html" template>
+                <input type="text" name="userName" value="{{ d.params.userName || '' }}" lay-verify="required"
+                       placeholder="请输入用户名" autocomplete="off" class="layui-input"
+                       {{# if(d.params.userName){ }} disabled {{# } }}>
+            </script>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">密码</label>
+        <div class="layui-input-inline">
+            <script type="text/html" template>
+                <input type="password" name="password"
+                       placeholder="无需修改请勿填写" autocomplete="off" class="layui-input">
+            </script>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">角色</label>
+        <div class="layui-input-block">
+            <script type="text/html" template>
+                <select id="roleId" name="roleId">
+                </select>
+            </script>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">姓名</label>
+        <div class="layui-input-inline">
+            <script type="text/html" template>
+                <input type="text" name="name" value="{{ d.params.name || '' }}" lay-verify="required"
+                       placeholder="请输入姓名" autocomplete="off" class="layui-input">
+            </script>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">性别</label>
+        <div class="layui-input-block">
+            <script type="text/html" template>
+                <input type="radio" name="sex" value="1" title="男" {{# if(d.params.sex=== 1){ }} checked {{# } }}
+                       checked>
+                <input type="radio" name="sex" value="0" title="女" {{# if(d.params.sex=== 0){ }} checked {{# } }}>
+            </script>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">手机</label>
+        <div class="layui-input-inline">
+            <script type="text/html" template>
+                <input type="text" name="mobile" value="{{ d.params.mobile || '' }}"
+                       placeholder="请输入手机号" autocomplete="off" class="layui-input">
+            </script>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">邮箱</label>
+        <div class="layui-input-inline">
+            <script type="text/html" template>
+                <input type="text" name="email" value="{{ d.params.email || '' }}" lay-verify="NEWEmail"
+                       placeholder="请输入邮箱" autocomplete="off" class="layui-input">
+            </script>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">简介</label>
+        <div class="layui-input-block">
+            <script type="text/html" template>
+                <textarea type="text" name="comment" autocomplete="off" class="layui-textarea">{{ d.params.comment || '' }}</textarea>
+            </script>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">审核状态</label>
+        <div class="layui-input-inline">
+            <script type="text/html" template>
+                <input type="checkbox" lay-filter="switch" name="status" value="1" {{ d.params.status== 1
+                       ? 'checked' : '' }} lay-skin="switch" lay-text="有效|无效">
+            </script>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label"></label>
+        <div class="layui-input-inline">
+            <input type="button" lay-submit lay-filter="LAY-user-back-submit" value="确认" class="layui-btn">
+        </div>
+    </div>
+</div>
+
+<script type="text/html" template lay-done="layui.data.sendParams(d.params)">
+</script>
+
+<script>
+    layui.data.sendParams = function (params) {
+
+        layui.use(['admin', 'form'], function () {
+            var $ = layui.$
+                , admin = layui.admin
+                , form = layui.form;
+
+            // 动态加载角色
+            admin.req({
+                url: layui.setter.request.url + '/mgr/admin/getRole'
+                , dataType: 'json'
+                , contentType: "application/json"
+                , method: 'GET'
+                , success: function (data) {
+                    $.each(data.data, function (index, item) {
+                        // 下拉菜单里添加元素
+                        $("select[name='roleId']").append(new Option(item.name, item.id));
+                    });
+                    // 设置默认选中
+                    if (!params.roleId) {
+                        $("select[name='roleId']").val(1);
+                    } else {
+                        $("select[name='roleId']").val(params.roleId);
+                    }
+                    form.render("select");
+                }
+            });
+        });
+    };
+</script>

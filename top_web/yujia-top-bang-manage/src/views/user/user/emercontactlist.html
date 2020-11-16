@@ -1,0 +1,70 @@
+<title>网站用户</title>
+
+<div class="layui-card layadmin-header">
+    <div class="layui-breadcrumb" lay-filter="breadcrumb">
+        <a lay-href="">主页</a>
+        <a><cite>用户</cite></a>
+        <a><cite>网站用户</cite></a>
+    </div>
+</div>
+
+<div class="layui-fluid">
+    <div class="layui-card">
+        <div class="layui-form layui-card-header layuiadmin-card-header-auto" lay-filter="layadmin-userfront-formlist">
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">用户ID</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="userId" placeholder="请输入" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <button id="LAY-user-front-search" class="layui-btn layuiadmin-btn-useradmin" lay-submit
+                            lay-filter="LAY-user-emer-contact-list-search">
+                        <i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-card-body">
+
+            <table id="LAY-user-emer-contact-list" lay-filter="LAY-user-emer-contact-list"></table>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    layui.use(['useradmin', 'table2'], layui.factory('useradmin')).use(['admin', 'useradmin', 'table'], function () {
+        var $ = layui.$
+            , admin = layui.admin
+            , view = layui.view
+            , table = layui.table
+            , table2 = layui.table2
+            , form = layui.form;
+
+        form.render(null, 'layadmin-userfront-formlist');
+
+        document.onkeydown = function (e) { // 回车提交表单
+            var theEvent = window.event || e;
+            var code = theEvent.keyCode || theEvent.which;
+            if (code == 13) {
+                $("#LAY-user-emer-contact-list-search").click(); // #chk_match 是你 提交按钮的ID
+            }
+        };
+
+        //监听搜索
+        form.on('submit(LAY-user-emer-contact-list-search)', function (data) {
+            var field = data.field;
+
+            //执行重载
+            table2.reload('LAY-user-emer-contact-list', {
+                page: {
+                    curr: 1
+                }
+                , where: field
+            });
+        });
+    });
+</script>

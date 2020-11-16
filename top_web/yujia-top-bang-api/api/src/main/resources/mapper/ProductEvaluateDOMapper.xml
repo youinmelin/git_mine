@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yujia.topbang.api.mapper.ProductEvaluateMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.yujia.topbang.api.entity.ProductEvaluateDO">
+        <id column="id" property="id"/>
+        <result column="product_id" property="productId"/>
+        <result column="product_name" property="productName"/>
+        <result column="product_user_id" property="productUserId"/>
+        <result column="user_id" property="userId"/>
+        <result column="score" property="score"/>
+        <result column="content" property="content"/>
+        <result column="img_url" property="imgUrl"/>
+        <result column="is_img" property="isImg"/>
+        <result column="is_video" property="isVideo"/>
+        <result column="is_review" property="isReview"/>
+        <result column="status" property="status"/>
+        <result column="reply_content" property="replyContent"/>
+        <result column="gmt_create" property="gmtCreate"/>
+        <result column="gmt_modified" property="gmtModified"/>
+        <result column="gmt_reply" property="gmtReply"/>
+        <result column="is_deleted" property="isDeleted"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, product_id, product_name, product_user_id, user_id, score, content, img_url, is_img, is_video, is_review, status, reply_content, gmt_create, gmt_modified, gmt_reply, is_deleted
+    </sql>
+
+    <!-- 获取产品评价均分 -->
+    <select id="getProductScore" resultType="Long" parameterType="Long">
+        select IFNULL(avg(score),0) as score from product_evaluate where product_id=#{prodId};
+    </select>
+
+</mapper>

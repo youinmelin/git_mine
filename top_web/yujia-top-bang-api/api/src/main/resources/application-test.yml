@@ -1,0 +1,82 @@
+server:
+  port: 53000
+
+# 日志配置
+logging:
+  config: classpath:logback-spring-dev.xml
+
+# mybatis-plus配置
+mybatis-plus:
+  global-config:
+    db-config:
+      # 下面这三个配置，命名官网说如果就是默认的，不需要添加，但是不添加就用不了。所以这里还是复制了一份默认的配置
+      logic-delete-field: flag  #全局逻辑删除字段值 3.3.0开始支持，详情看下面。
+      logic-delete-value: 1 # 逻辑已删除值(默认为 1)
+      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
+
+spring:
+  application:
+    name: yujia-top-bang-api
+  datasource:
+    # Druid 多数据源配置
+    type: com.alibaba.druid.pool.DruidDataSource
+    top-bang:
+      type: com.alibaba.druid.pool.DruidDataSource
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      #指定初始化数据源，是否用data.sql来初始化，默认: true
+      initialize: true
+      name: top_bang
+      # url: jdbc: mysql://192.168.200.1:3306/top_bang_dev?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC&allowMultiQueries=true
+      url: jdbc: mysql://localhost:3306/top_bang_dev?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC&allowMultiQueries=true
+      username: root
+      password: abc123456
+    # Druid 配置
+    druid:
+      # 访问监控页面账号密码
+      stat-view-servlet:
+        # 自定义请求访问地址
+        url-pattern: /api/mgr/druid/*
+        # 禁用HTML页面上的“Reset All”功能(官网wiki是这么写的，但是实际没起作用)
+        reset-enable: false
+        login-username: admin
+        login-password: 123456
+      # 插件
+      filter:
+        # 监控统计
+        stat:
+          # 开启慢SQL检测
+          merge-sql: true
+          slow-sql-millis: 200
+        # 防火墙
+        wall:
+          enabled: true
+  session:
+    store-type: redis
+  redis:
+    # host: 192.168.200.1
+    host: 127.0.0.1
+    port: 6379
+    # database: 0
+    # password: abc123
+  mvc:
+    # 处理options预检请求
+    dispatch-options-request: true
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      enabled: true
+
+# 阿里配置
+ali:
+  access-key-id:
+  access-key-secret:
+  oss:
+    endpoint: 
+    bucket: 
+    # 注意最后不要加 /
+    img-url: 
+    model: test
+
+# 自定义ES服务地址
+elsearch:
+  server: 192.168.200.1,9200

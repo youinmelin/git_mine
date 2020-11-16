@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.forgetfulr.admin.mapper.AdminUserMapper">
+
+    <resultMap id="adminUserMap" type="com.forgetfulr.admin.entity.AdminUserDO">
+        <id property="id" column="id"/>
+        <result property="userName" column="user_name"/>
+        <result property="password" column="password"/>
+        <result property="roleId" column="role_id"/>
+        <result property="roleName" column="role_name"/>
+        <result property="name" column="name"/>
+        <result property="sex" column="sex"/>
+        <result property="mobile" column="mobile"/>
+        <result property="email" column="email"/>
+        <result property="comment" column="comment"/>
+        <result property="status" column="status"/>
+        <result property="gmtCreate" column="gmt_create"/>
+        <result property="gmtModified" column="gmt_modified"/>
+        <result property="isDeleted" column="is_deleted"/>
+    </resultMap>
+
+    <!-- 搜索条件 -->
+    <sql id="selectWhere">
+        <where>
+            <if test="id != null">
+                AND au.id=#{id}
+            </if>
+            <if test="userName != null">
+                AND au.user_name=#{userName}
+            </if>
+            <if test="password != null">
+                AND au.password=#{password}
+            </if>
+            <if test="roleId != null">
+                AND au.role_id=#{roleId}
+            </if>
+            <if test="name != null">
+                AND au.name=#{name}
+            </if>
+            <if test="sex != null">
+                AND au.sex=#{sex}
+            </if>
+            <if test="mobile != null">
+                AND au.mobile=#{mobile}
+            </if>
+            <if test="email != null">
+                AND au.email=#{email}
+            </if>
+            <if test="comment != null">
+                AND au.comment=#{comment}
+            </if>
+            <if test="status != null">
+                AND au.status=#{status}
+            </if>
+            <if test="gmtCreate != null">
+                AND au.gmt_create=#{gmtCreate}
+            </if>
+            <if test="gmtModified != null">
+                AND au.gmt_modified=#{gmtModified}
+            </if>
+            AND au.is_deleted=0
+        </where>
+    </sql>
+
+    <!-- 查询列表 -->
+    <select id="getLogin" resultMap="adminUserMap" parameterType="com.forgetfulr.admin.entity.AdminUserDO">
+        SELECT
+        au.id
+        FROM admin_user au left join admin_role as ar
+        ON au.role_id=ar.id
+        <include refid="selectWhere"></include>
+    </select>
+
+</mapper>

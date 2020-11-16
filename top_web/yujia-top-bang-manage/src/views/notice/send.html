@@ -1,0 +1,127 @@
+<title>消息发送</title>
+
+<div class="layui-card layadmin-header">
+    <div class="layui-breadcrumb" lay-filter="breadcrumb">
+        <a lay-href="">主页</a>
+        <a><cite>消息管理</cite></a>
+        <a><cite>消息发送</cite></a>
+    </div>
+</div>
+
+<div class="layui-fluid">
+    <div class="layui-card">
+        <div class="layui-card-header">消息发送</div>
+        <div class="layui-card-body" style="padding: 15px;">
+            <form class="layui-form" action="" lay-filter="component-form-group">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">接收用户ID</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="userId" lay-verify="required" autocomplete="off"
+                               placeholder="多个用户请用英文逗号分隔"
+                               class="layui-input">
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">发送类型</label>
+                    <div class="layui-input-block">
+                        <input type="checkbox" name="write" title="站内信">
+                        <input type="checkbox" name="mail" title="邮件">
+                        <input type="checkbox" name="phone" title="短信">
+                        <input type="checkbox" name="weixin" title="微信公众号">
+                        <input type="checkbox" name="app" title="APP推送">
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">标题</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" lay-verify="required" placeholder="请输入" autocomplete="off"
+                               class="layui-input">
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">APP Url</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="appUrl" placeholder="非必填，APP推送时才有用" autocomplete="off"
+                               class="layui-input">
+                    </div>
+                </div>
+
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">内容</label>
+                    <div class="layui-input-block">
+                        <textarea id="demo" name="content" placeholder="请输入内容" class="layui-textarea"></textarea>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <div class="layui-footer">
+                            <button class="layui-btn" lay-submit="" lay-filter="component-form-demo1">立即提交</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    layui.use(['admin', 'form', 'laydate', 'layedit'], function () {
+        var $ = layui.$
+            , admin = layui.admin
+            , element = layui.element
+            , layer = layui.layer
+            , laydate = layui.laydate
+            , form = layui.form
+            , layedit = layui.layedit;
+
+        layedit.set({
+            uploadImage: {
+                url: layui.setter.request.url + '/mgr/upload/oss/test' //接口url
+                , type: '' //默认post
+            }
+        });
+
+        var editIndex = layedit.build('demo', {
+            height: 260 //设置编辑器高度
+        }); //建立编辑器
+
+        form.render(null, 'component-form-group');
+
+        laydate.render({
+            elem: '#LAY-component-form-group-date'
+        });
+
+        /* 监听提交 */
+        form.on('submit(component-form-demo1)', function (data) {
+            // 富文本编辑器内容放进去
+            // data.field.content = layedit.getContent(editIndex);
+            // layer.alert(JSON.stringify(data.field), {
+            //     title: '最终的提交信息'
+            // });
+            // return false;
+
+            var field = data.field; //获取提交的字段
+            field.content = layedit.getContent(editIndex);
+            //提交 Ajax 成功后，关闭当前弹层并重载表格
+            admin.req({
+                url: layui.setter.request.url + '/mgr/notice/noticeInsert' //实际使用请改成服务端真实接口
+                , data: JSON.stringify(field)
+                , dataType: 'json'
+                , contentType: "application/json"
+                , type: 'POST'
+                // success是只要提交返回了，就执行。done是只能接口返回的是成功，才执行
+                , done: function (res) {
+                    //执行重载
+                    layer.alert("消息推送提交成功", {
+                        title: '提示'
+                    });
+                }
+            });
+            return false;
+        });
+    });
+</script>

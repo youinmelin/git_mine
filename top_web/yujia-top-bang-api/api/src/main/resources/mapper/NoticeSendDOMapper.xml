@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yujia.topbang.api.mapper.NoticeSendMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.yujia.topbang.api.entity.NoticeSendDO">
+        <id column="id" property="id" />
+        <result column="content_id" property="contentId" />
+        <result column="user_id" property="userId" />
+        <result column="receive_object" property="receiveObject" />
+        <result column="type" property="type" />
+        <result column="gmt_create" property="gmtCreate" />
+        <result column="gmt_send" property="gmtSend" />
+        <result column="is_send" property="isSend" />
+        <result column="gmt_received" property="gmtReceived" />
+        <result column="gmt_read" property="gmtRead" />
+        <result column="is_read" property="isRead" />
+        <result column="user_deleted" property="userDeleted" />
+        <result column="gmt_modified" property="gmtModified" />
+        <result column="is_deleted" property="isDeleted" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, content_id, user_id, receive_object, type, gmt_create, gmt_send, is_send, gmt_received, gmt_read, is_read, user_deleted, gmt_modified, is_deleted
+    </sql>
+
+</mapper>

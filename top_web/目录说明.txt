@@ -1,0 +1,7 @@
+目录说明
+前端 topbang
+后台 yujia-top-bang-manage
+API yujia-top-bang-api
+
+node基于10.x开发，11或12版本会出现构建错误，尽量使用node10进行打包
+API基于springboot 2.3.0开发

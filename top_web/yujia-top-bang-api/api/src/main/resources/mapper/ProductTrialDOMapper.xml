@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yujia.topbang.api.mapper.ProductTrialMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.yujia.topbang.api.entity.ProductTrialDO">
+        <id column="id" property="id"/>
+        <result column="prod_id" property="prodId"/>
+        <result column="prod_user_id" property="prodUserId"/>
+        <result column="user_id" property="userId"/>
+        <result column="status" property="status"/>
+        <result column="gmt_create" property="gmtCreate"/>
+        <result column="gmt_modified" property="gmtModified"/>
+        <result column="is_deleted" property="isDeleted"/>
+        <result column="video_img_url" property="videoImgUrl"/>
+        <result column="name" property="name"/>
+        <result column="userName" property="userName"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, prod_id, prod_user_id, user_id, status, gmt_create, gmt_modified, is_deleted
+    </sql>
+
+    <!-- 和产品表联查 -->
+    <select id="getProductTrialInfo" resultMap="BaseResultMap">
+        select pt.*,p.video_img_url,p.name,u.name as userName
+        from product_trial as pt
+        left join product as p on pt.prod_id=p.id
+        left join user as u on pt.user_id=u.id
+        <where>
+            <if test="userId != null">
+                and (pt.user_id = #{userId} or pt.prod_user_id = #{userId})
+            </if>
+            <if test="status != null">
+                and pt.status = #{status}
+            </if>
+            <if test="strSearch != null and strSearch != ''">
+                and p.name like concat('%',#{strSearch,jdbcType=VARCHAR},'%')
+            </if>
+        </where>
+    </select>
+
+</mapper>

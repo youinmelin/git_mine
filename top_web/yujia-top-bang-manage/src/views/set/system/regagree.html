@@ -1,0 +1,131 @@
+<title>注册协议</title>
+
+<div class="layui-card layadmin-header">
+    <div class="layui-breadcrumb" lay-filter="breadcrumb">
+        <a lay-href="">主页</a>
+        <a><cite>设置</cite></a>
+        <a><cite>注册协议</cite></a>
+    </div>
+</div>
+
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header">注册协议</div>
+                <div class="layui-card-body" pad15>
+                    <div class="layui-form-item layui-form-text">
+                        <textarea id="mytextarea"></textarea>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn layui-btn-normal" lay-submit lay-filter="setServiceState">确认保存
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 引入新编辑器 TinyMCE -->
+<!-- 中文文档 http://tinymce.ax-z.cn/ 英文文档 https://www.tiny.cloud/docs/quick-start/ -->
+<script type="text/javascript" src="tinymce/tinymce.min.js"></script>
+<script>
+    layui.use('form', layui.factory('form')).use(['admin', 'form'], function () {
+        var $ = layui.$
+            , form = layui.form
+            , admin = layui.admin;
+
+        tinymce.init({
+            // 匹配
+            selector: '#mytextarea',
+            // 配置语言包
+            language: 'zh_CN',
+            // 显示右下角技术支持
+            branding: false,
+            // 设置编辑器默认高度
+            height: 600,
+            // 插件配置
+            plugins: [
+                'advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker',
+                'searchreplace wordcount visualblocks visualchars code insertdatetime media nonbreaking',
+                'table emoticons paste codesample'
+            ],
+            // 头部工具栏配置
+            toolbar: 'undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify |' +
+                ' bullist numlist outdent indent | link image | print preview media fullpage | ' +
+                'forecolor backcolor emoticons | codesample',
+            // 顶部菜单栏配置
+            menubar: 'favs file edit view insert format tools table',
+            // content_css: 'css/content.css',
+
+            // 图片上传自定义实现
+            images_upload_handler: function (blobInfo, success, failure) {
+                var xhr, formData;
+
+                xhr = new XMLHttpRequest();
+                xhr.withCredentials = false;
+                xhr.open('POST', layui.setter.request.url + '/mgr/upload/oss/posts');
+                // 配置Header
+                xhr.setRequestHeader('accessToken', layui.data([layui.setter.tableName])[layui.setter.request.tokenName]);
+
+                xhr.onload = function () {
+                    var json;
+                    if (xhr.status !== 200) {
+                        failure('HTTP Error: ' + xhr.status);
+                        return;
+                    }
+                    json = JSON.parse(xhr.responseText);
+                    // 如果解析不了就抛出异常
+                    if (!json) {
+                        failure('Invalid JSON: ' + xhr.responseText);
+                        return;
+                    }
+                    // 成功就回传URL路径
+                    success(json.data.src);
+                };
+                formData = new FormData();
+                formData.append('file', blobInfo.blob(), blobInfo.filename());
+                xhr.send(formData);
+            },
+        });
+
+        // 设置服务声明
+        form.on('submit(setServiceState)', function (obj) {
+            var field = {}; //获取提交的字段
+            // 新编辑器
+            field.content = tinyMCE.activeEditor.getContent();
+            admin.req({
+                url: layui.setter.request.url + '/mgr/webOption/setOption/setRegAgree'
+                , data: JSON.stringify(field)
+                , dataType: 'json'
+                , contentType: "application/json"
+                , type: 'POST'
+                , success: function () {
+                    layer.msg("修改成功");
+                }
+            });
+            return false;
+        });
+
+        // 由于这里加载太快了。导致控件还没显示出现就加载了。会出现设置无效的问题。这里进行一个延时操作
+        setTimeout(function () {
+            admin.req({
+                url: layui.setter.request.url + '/mgr/webOption/getOption/setRegAgree'
+                , dataType: 'json'
+                , contentType: "application/json"
+                , method: 'GET'
+                , success: function (data) {
+                    tinyMCE.activeEditor.setContent(data.data[0]['value']);
+                    //重新渲染显示效果
+                    layui.form.render();
+                }
+            });
+        }, 1000);
+
+    });
+</script>

@@ -1,0 +1,108 @@
+<div class="layui-form" lay-filter="layuiadmin-form-useradmin" style="padding: 20px 0 0 0;">
+    <div class="layui-form-item">
+        <label class="layui-form-label">昵称</label>
+        <div class="layui-input-inline">
+            <script type="text/html" template>
+                <input type="text" name="nickname" value="{{ d.params.nickname || '' }}" lay-verify="required"
+                       placeholder="请输入昵称" autocomplete="off" class="layui-input">
+            </script>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">姓名</label>
+        <div class="layui-input-inline">
+            <script type="text/html" template>
+                <input type="text" name="name" value="{{ d.params.name || '' }}" lay-verify="required"
+                       placeholder="请输入姓名" autocomplete="off" class="layui-input">
+            </script>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">密码</label>
+        <div class="layui-input-inline">
+            <script type="text/html" template>
+                <input type="password" name="passwd"
+                       placeholder="无需修改请勿填写" autocomplete="off" class="layui-input">
+            </script>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">身份证号码</label>
+        <div class="layui-input-inline">
+            <script type="text/html" template>
+                <input type="text" name="idnumber" value="{{ d.params.idnumber || '' }}"
+                       placeholder="请输入身份证号码" autocomplete="off" class="layui-input">
+            </script>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">手机号码</label>
+        <div class="layui-input-inline">
+            <script type="text/html" template>
+                <input type="text" name="mobile" value="{{ d.params.mobile || '' }}"
+                       placeholder="请输入手机号码" autocomplete="off" class="layui-input">
+            </script>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">邮箱</label>
+        <div class="layui-input-inline">
+            <script type="text/html" template>
+                <input type="text" name="email" value="{{ d.params.email || '' }}"
+                       placeholder="请输入邮箱" autocomplete="off" class="layui-input">
+            </script>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">性别</label>
+        <div class="layui-input-block">
+            <script type="text/html" template>
+                <input type="radio" name="gender" value="1" title="男" {{# if(d.params.gender=== 1){ }} checked {{# } }}>
+                <input type="radio" name="gender" value="0" title="女" {{# if(d.params.gender=== 0){ }} checked {{# } }}>
+            </script>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">备注</label>
+        <div class="layui-input-block">
+            <script type="text/html" template>
+                <textarea type="text" name="remark" autocomplete="off" class="layui-textarea">{{ d.params.remark || '' }}</textarea>
+            </script>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">审核状态</label>
+        <div class="layui-input-inline">
+            <script type="text/html" template>
+                <input type="checkbox" lay-filter="switch" name="status" value="1" {{ d.params.status== 1
+                       ? 'checked' : '' }} lay-skin="switch" lay-text="有效|无效">
+            </script>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label"></label>
+        <div class="layui-input-inline">
+            <input type="button" lay-submit lay-filter="LAY-user-front-submit" value="确认" class="layui-btn">
+        </div>
+    </div>
+</div>
+
+<script>
+    layui.use(['admin', 'form', 'upload'], function () {
+        var $ = layui.$
+            , form = layui.form
+            , upload = layui.upload;
+
+        //上传头像
+        upload.render({
+            elem: '#layuiadmin-upload-useradmin'
+            , url: './json/upload/demo.js'
+            , accept: 'images'
+            , method: 'get'
+            , acceptMime: 'image/*'
+            , done: function (res) {
+                $(this.item).prev("div").children("input").val(res.data.src)
+            }
+        });
+    })
+</script>

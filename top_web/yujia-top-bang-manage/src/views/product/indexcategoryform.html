@@ -1,0 +1,61 @@
+<div class="layui-form" lay-filter="layuiadmin-form-useradmin" style="padding: 20px 0 0 0;">
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">栏目</label>
+        <div class="layui-input-inline">
+            <script type="text/html" template>
+                <select id="categoryId" name="categoryId">
+                </select>
+            </script>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">排序</label>
+        <div class="layui-input-block">
+            <script type="text/html" template>
+                <input type="text" name="sort" value="{{ d.params.sort || '0' }}" required lay-verify="number"
+                       autocomplete="off" class="layui-input">
+            </script>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label"></label>
+        <div class="layui-input-inline">
+            <input type="button" lay-submit lay-filter="LAY-product-index-category-submit" value="确认" class="layui-btn">
+        </div>
+    </div>
+</div>
+
+<script type="text/html" template lay-done="layui.data.sendParams(d.params)">
+</script>
+<script>
+    layui.data.sendParams = function (params) {
+        layui.use(['admin', 'form', 'upload'], function () {
+            var $ = layui.$
+                , form = layui.form
+                , admin = layui.admin
+                , upload = layui.upload;
+
+            // 分类
+            admin.req({
+                url: layui.setter.request.url + '/mgr/product/getIndexCategory'
+                , dataType: 'json'
+                , contentType: "application/json"
+                , method: 'GET'
+                , success: function (data) {
+                    $.each(data.data, function (index, item) {
+                        // 下拉菜单里添加元素
+                        $("select[name='categoryId']").append(new Option(item.name, item.id));
+                    });
+                    // 设置默认选中
+                    if (params.categoryId) {
+                        $("select[name='categoryId']").val(params.categoryId);
+                    }
+                    layui.form.render("select");
+                }
+            });
+        })
+    };
+</script>

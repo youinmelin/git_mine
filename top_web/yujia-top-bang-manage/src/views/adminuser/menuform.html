@@ -1,0 +1,130 @@
+<div class="layui-form" lay-filter="layuiadmin-form-role" style="padding: 20px 30px 0 0;">
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">唯一名称</label>
+        <div class="layui-input-block">
+            <script type="text/html" template>
+                <input type="text" name="name" required lay-verify="required" placeholder="权限名" autocomplete="off"
+                       class="layui-input" value="{{ d.params.name || '' }}">
+            </script>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">类型</label>
+        <div class="layui-input-block">
+            <script type="text/html" template>
+                <select name="type">
+                    <option value="0" {{ d.params.type===
+                    '0' ? 'selected' : '' }}>菜单</option>
+                    <option value="1" {{ d.params.type===
+                    '1' ? 'selected' : '' }}>按钮</option>
+                </select>
+            </script>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">菜单图标</label>
+        <div class="layui-input-block">
+            <script type="text/html" template>
+                <select name="routeIcon">
+                </select>
+            </script>
+            <div class="layui-form-mid layui-word-aux">图标样式列表
+                <a href="https://www.layui.com/doc/element/icon.html" target="_blank">点击此处</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">显示名称</label>
+        <div class="layui-input-block">
+            <input type="text" name="title" required lay-verify="required" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">具体描述</label>
+        <div class="layui-input-block">
+            <script type="text/html" template>
+                <textarea type="text" name="description" autocomplete="off" class="layui-textarea">{{ d.params.descr || '' }}</textarea>
+            </script>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">页面路由</label>
+        <div class="layui-input-block">
+            <input type="text" name="routeUrl" required lay-verify="required" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">接口请求url</label>
+        <div class="layui-input-block">
+            <input type="text" name="requestUrl" required lay-verify="required" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">请求方式</label>
+        <div class="layui-input-block">
+            <script type="text/html" template>
+                <select name="requestMethod">
+                    <option value="GET" {{ d.params.request_method===
+                    '0' ? 'selected' : '' }}>GET</option>
+                    <option value="POST" {{ d.params.request_method===
+                    '1' ? 'selected' : '' }}>POST</option>
+                    <option value="PUT" {{ d.params.request_method===
+                    '2' ? 'selected' : '' }}>PUT</option>
+                    <option value="DELETE" {{ d.params.request_method===
+                    '3' ? 'selected' : '' }}>DELETE</option>
+                </select>
+            </script>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">排序</label>
+        <div class="layui-input-block">
+            <input type="text" name="sort" required lay-verify="number" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">默认展开</label>
+        <div class="layui-input-block">
+            <input type="checkbox" name="spread" lay-skin="switch" lay-text="开启|关闭" value="1">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label"></label>
+        <div class="layui-input-inline">
+            <input type="button" lay-submit lay-filter="LAY-user-role-submit" value="确认" class="layui-btn">
+        </div>
+    </div>
+</div>
+
+<script>
+    layui.use(['admin', 'form'], function () {
+        var $ = layui.$
+            , admin = layui.admin
+            , form = layui.form;
+
+        admin.req({
+            type: 'GET',
+            url: layui.setter.request.url + '/common/getLayuiIcon',
+            dataType: 'json',
+            done: function (data) {
+                $.each(data.data, function (index, item) {
+                    // 下拉菜单里添加元素
+                    $("select[name='routeIcon']").append(new Option(item.name, item.fontclass));
+                });
+                layui.form.render("select");
+            }
+        });
+
+    });
+</script>

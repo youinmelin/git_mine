@@ -1,0 +1,148 @@
+<title>站点信息</title>
+
+<div class="layui-card layadmin-header">
+    <div class="layui-breadcrumb" lay-filter="breadcrumb">
+        <a lay-href="">主页</a>
+        <a><cite>设置</cite></a>
+        <a><cite>站点信息</cite></a>
+    </div>
+</div>
+
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header">站点信息</div>
+                <div class="layui-card-body" pad15>
+
+                    <div class="layui-form" wid100 lay-filter="">
+
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">SEO Title</label>
+                            <div class="layui-input-block">
+                                <input type="text" id="seoTitle" name="seoTitle" lay-verify="required" placeholder="请输入SEO标题"
+                                       autocomplete="off"
+                                       class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">SEO Description</label>
+                            <div class="layui-input-block">
+                                <input type="text" id="seoDescription" name="seoDescription" lay-verify="required"
+                                       placeholder="请输入SEO简介"
+                                       autocomplete="off"
+                                       class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">SEO Keywords</label>
+                            <div class="layui-input-block">
+                                <input type="text" id="seoKeywords" name="seoKeywords" lay-verify="required"
+                                       placeholder="请输入SEO搜索关键词"
+                                       autocomplete="off"
+                                       class="layui-input">
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">首页背景图</label>
+                            <div class="layui-input-inline">
+                                <input id="indexBannerImg" name="indexBannerImg" placeholder="图片地址"
+                                       value="" class="layui-input">
+                            </div>
+                            <div class="layui-input-inline layui-btn-container" style="width: auto;">
+                                <button type="button" class="layui-btn layui-btn-primary" id="LAY_indexBannerImgUpload">
+                                    <i class="layui-icon">&#xe67c;</i>上传图片
+                                </button>
+                                <button class="layui-btn layui-btn-primary" layadmin-event="LAY_indexBannerImg_Preview">查看图片
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <div class="layui-input-block">
+                                <button class="layui-btn layui-btn-normal" lay-submit lay-filter="setSeo">确认保存
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    layui.use(['form', 'upload'], function () {
+        var $ = layui.$
+            , form = layui.form
+            , admin = layui.admin
+            , upload = layui.upload;
+
+        // 微信
+        var wxMpImg = $('#indexBannerImg');
+        upload.render({
+            url: layui.setter.request.url + '/mgr/upload/oss/image' //上传接口
+            , elem: '#LAY_indexBannerImgUpload'
+            , headers: {
+                accessToken: layui.data([layui.setter.tableName])[layui.setter.request.tokenName]
+            }
+            , acceptMime: 'image/*'
+            , field: 'file'
+            , done: function (res) {
+                wxMpImg.val(res.data.src);
+            }
+        });
+        // 图片查看
+        admin.events.LAY_indexBannerImg_Preview = function (othis) {
+            var src = wxMpImg.val();
+            layer.photos({
+                photos: {
+                    "title": "查看图片" //相册标题
+                    , "data": [{
+                        "src": src //原图地址
+                    }]
+                }
+                , shade: 0.01
+                , closeBtn: 1
+                , anim: 5
+            });
+        };
+
+        // 联系我们
+        form.on('submit(setSeo)', function (obj) {
+            admin.req({
+                url: layui.setter.request.url + '/mgr/webOption/setOption/setSeo'
+                , data: JSON.stringify(obj.field)
+                , dataType: 'json'
+                , contentType: "application/json"
+                , type: 'POST'
+                , success: function () {
+                    layer.msg("修改成功");
+                }
+            });
+            return false;
+        });
+
+        // 由于这里加载太快了。导致控件还没显示出现就加载了。会出现设置无效的问题。这里进行一个延时操作
+        // setTimeout(function () {
+        admin.req({
+            url: layui.setter.request.url + '/mgr/webOption/getOption/setSeo'
+            , dataType: 'json'
+            , contentType: "application/json"
+            , method: 'GET'
+            , success: function (data) {
+                for (var i = 0; i < data.data.length; i++) {
+                    if (data.data[i]['code'] !== "file") {
+                        document.getElementById(data.data[i]['code']).value = data.data[i]['value'];
+                    }
+                }
+                //重新渲染显示效果
+                layui.form.render();
+            }
+        });
+        // }, 1000);
+
+    });
+</script>

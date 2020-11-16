@@ -1,0 +1,362 @@
+<title>添加文章</title>
+
+<div class="layui-card layadmin-header">
+    <div class="layui-breadcrumb" lay-filter="breadcrumb">
+        <a lay-href="">主页</a>
+        <a><cite>文章管理</cite></a>
+        <a><cite>添加文章</cite></a>
+    </div>
+</div>
+
+<div class="layui-fluid">
+    <div class="layui-card">
+        <div class="layui-card-header"></div>
+        <div class="layui-card-body" style="padding: 15px;">
+            <form class="layui-form" action="" lay-filter="component-form-group">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">标题</label>
+                    <div class="layui-input-block">
+                        <input type="text" id="title" name="title" lay-verify="title|required" autocomplete="off"
+                               placeholder="请输入标题"
+                               class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">分类</label>
+                        <div class="layui-input-inline">
+                            <script type="text/html" template>
+                                <select id="category_id" name="category_id">
+                                </select>
+                            </script>
+                        </div>
+                    </div>
+
+                    <div class="layui-inline">
+                        <label class="layui-form-label">类型</label>
+                        <div class="layui-input-inline">
+                            <script type="text/html" template>
+                                <select id="type" name="type">
+                                    <option value="0">新闻</option>
+                                    <option value="1">产品</option>
+                                    <option value="2">单页</option>
+                                    <option value="3">多页</option>
+                                </select>
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">作者</label>
+                        <div class="layui-input-inline">
+                            <input type="text" id="author" name="author" lay-verify="required" autocomplete="off"
+                                   class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-inline">
+                        <label class="layui-form-label">发布时间</label>
+                        <div class="layui-input-inline">
+                            <input type="text" id="publish_at" name="publish_at" id="publish_at" lay-verify="datetime"
+                                   placeholder="yyyy-MM-dd HH:mm:ss" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">推荐</label>
+                        <div class="layui-input-inline">
+                            <input type="checkbox" id="is_recommend" name="is_recommend" lay-skin="switch"
+                                   lay-text="ON|OFF">
+                        </div>
+                    </div>
+
+                    <div class="layui-inline">
+                        <label class="layui-form-label">置顶</label>
+                        <div class="layui-input-inline">
+                            <input type="checkbox" id="is_top" name="is_top" lay-skin="switch"
+                                   lay-text="ON|OFF">
+                        </div>
+                    </div>
+
+                    <div class="layui-inline">
+                        <label class="layui-form-label">评论</label>
+                        <div class="layui-input-inline">
+                            <input type="checkbox" id="is_comment" name="is_comment" lay-skin="switch"
+                                   lay-text="ON|OFF">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">来源</label>
+                    <div class="layui-input-block">
+                        <input type="text" id="source" name="source" lay-verify="required" autocomplete="off"
+                               class="layui-input">
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">主图</label>
+                    <div class="layui-input-inline">
+                        <button type="button" class="layui-btn" id="imgUrl1">
+                            <i class="layui-icon">&#xe67c;</i>上传图片
+                        </button>
+                        <img name="img_url" id="img_url" src=""/>
+                        <input type="hidden" id="imgUrl" name="imgUrl"/>
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">文章简介</label>
+                    <div class="layui-input-block">
+                        <input type="text" id="description" name="description" lay-verify="required"
+                               placeholder="请输入" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label"></label>
+                    <div class="layui-input-block">
+                        <textarea id="mytextarea"></textarea>
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <div class="layui-footer">
+                            <button class="layui-btn" lay-submit lay-filter="posts-form-submit">发布</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script type="text/html" template lay-done="layui.data.sendParams(d.params)">
+</script>
+
+<!-- 引入新编辑器 TinyMCE -->
+<!-- 中文文档 http://tinymce.ax-z.cn/ 英文文档 https://www.tiny.cloud/docs/quick-start/ -->
+<script type="text/javascript" src="tinymce/tinymce.min.js"></script>
+<script>
+    layui.data.sendParams = function (params) {
+        layui.use(['admin', 'form', 'laydate', 'layedit', 'upload'], function () {
+            var $ = layui.$
+                , admin = layui.admin
+                , element = layui.element
+                , layer = layui.layer
+                , laydate = layui.laydate
+                , form = layui.form
+                , upload = layui.upload
+                , layedit = layui.layedit
+                , router = layui.router();
+
+            tinymce.init({
+                // 匹配
+                selector: '#mytextarea',
+                // 配置语言包
+                language: 'zh_CN',
+                // 显示右下角技术支持
+                branding: false,
+                // 设置编辑器默认高度
+                height: 600,
+                // 插件配置
+                plugins: [
+                    'advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker',
+                    'searchreplace wordcount visualblocks visualchars code insertdatetime media nonbreaking',
+                    'table emoticons paste codesample'
+                ],
+                // 头部工具栏配置
+                toolbar: 'undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify |' +
+                    ' bullist numlist outdent indent | link image | print preview media fullpage | ' +
+                    'forecolor backcolor emoticons | codesample',
+                // 顶部菜单栏配置
+                menubar: 'favs file edit view insert format tools table',
+                // content_css: 'css/content.css',
+
+                // 图片上传自定义实现
+                images_upload_handler: function (blobInfo, success, failure) {
+                    var xhr, formData;
+
+                    xhr = new XMLHttpRequest();
+                    xhr.withCredentials = false;
+                    xhr.open('POST', layui.setter.request.url + '/mgr/upload');
+                    // 配置Header
+                    xhr.setRequestHeader('accessToken', layui.data([layui.setter.tableName])[layui.setter.request.tokenName]);
+
+                    xhr.onload = function () {
+                        var json;
+                        if (xhr.status !== 200) {
+                            failure('HTTP Error: ' + xhr.status);
+                            return;
+                        }
+                        json = JSON.parse(xhr.responseText);
+                        // 如果解析不了就抛出异常
+                        if (!json) {
+                            failure('Invalid JSON: ' + xhr.responseText);
+                            return;
+                        }
+                        // 成功就回传URL路径
+                        success(json.data);
+                    };
+                    formData = new FormData();
+                    formData.append('wangEditorH5File', blobInfo.blob(), blobInfo.filename());
+                    xhr.send(formData);
+                },
+            });
+
+            // 绑定上传按钮执行实例
+            upload.render({
+                elem: '#imgUrl1' //绑定元素
+                , url: layui.setter.request.url + '/mgr/upload' //上传接口
+                , headers: {
+                    Authorization: layui.data([layui.setter.tableName])[layui.setter.request.tokenName]
+                }
+                , acceptMime: 'image/*'
+                , field: 'wangEditorH5File'
+                , done: function (res) {
+                    //上传完毕回调
+                    $("#imgUrl").attr('src', res.data).attr('width', '200').attr('height', '100');
+                    $("#img_url").attr('value', res.data);
+                }
+                , error: function () {
+                    //请求异常回调
+                }
+            });
+
+            form.render(null, 'component-form-group');
+
+            // 执行一个laydate实例，如果用到了时间选择器，就要下面的代码
+            laydate.render({
+                elem: '#publish_at'
+                , type: 'datetime'
+            });
+
+            // 分类
+            // admin.req({
+            //     url: layui.setter.request.url + '/mgr/posts/getCategory'
+            //     , dataType: 'json'
+            //     , contentType: "application/json"
+            //     , method: 'GET'
+            //     , success: function (data) {
+            //         $.each(data.data, function (index, item) {
+            //             // 下拉菜单里添加元素
+            //             $("select[name='category_id']").append(new Option(item.name, item.id));
+            //         });
+            //         // 设置默认选中
+            //         if (!params.category_id) {
+            //             $("select[name='category_id']").val(1);
+            //         }
+            //         layui.form.render("select");
+            //     }
+            // });
+
+            /* 监听提交 */
+            form.on('submit(posts-form-submit)', function (data) {
+                layer.load();
+                // data.field.content = editor.txt.html();
+                // layer.alert(JSON.stringify(data.field), {
+                //     title: '最终的提交信息'
+                // });
+                var field = data.field; //获取提交的字段
+                // 新编辑器
+                field.content = tinyMCE.activeEditor.getContent();
+                // 如果带了ID，就是修改
+                if (router.search.id) {
+                    field.id = router.search.id;
+                }
+                //提交 Ajax 成功后，关闭当前弹层并重载表格
+                admin.req({
+                    url: layui.setter.request.url + '/mgr/posts/save'
+                    , data: JSON.stringify(field)
+                    , dataType: 'json'
+                    , contentType: "application/json"
+                    , type: 'POST'
+                    , success: function (res) {
+                        layer.open({
+                            type: 1
+                            , offset: 'auto' //具体配置参考：http://www.layui.com/doc/modules/layer.html#offset
+                            , id: 'layerDemoAuto' //防止重复弹出
+                            , content: '<div style="padding: 20px 100px;">提交成功</div>'
+                            , btn: '确定'
+                            , closeBtn: 0 // 不显示关闭按钮
+                            , btnAlign: 'c' //按钮居中
+                            , shade: 0.3 //不显示遮罩
+                            , yes: function () {
+                                layer.closeAll();
+                                location.hash = '/posts/list';
+                            }
+                        });
+                    }
+                });
+                return false;
+            });
+
+            if (router.search.id) {
+                // 增加遮罩
+                layer.load();
+                // layer.alert(router.search.id);//弹出提示 “1”
+                admin.req({
+                    url: layui.setter.request.url + '/mgr/posts/show/' + router.search.id
+                    , dataType: 'json'
+                    , contentType: "application/json"
+                    , type: 'GET'
+                    , success: function (res) {
+                        // 标题
+                        $('#title').attr('value', res.data.title);
+                        // 分类
+                        $("select[name='category_id']").val(res.data.category_id);
+                        layui.form.render("select");
+                        // 类型
+                        $("select[name='type']").val(res.data.type);
+                        layui.form.render("select");
+                        // 推荐
+                        if (res.data.is_recommend === 1) {
+                            $('#is_recommend').attr("checked", true); //注意这里使用的是attr()
+                        }
+                        layui.form.render(); //重新渲染显示效果
+                        // 置顶
+                        if (res.data.is_top === 1) {
+                            $('#is_top').attr("checked", true); //注意这里使用的是attr()
+                        }
+                        layui.form.render(); //重新渲染显示效果
+                        // 是否评论
+                        if (res.data.is_comment === 1) {
+                            $('#is_comment').attr("checked", true); //注意这里使用的是attr()
+                        }
+                        layui.form.render(); //重新渲染显示效果
+                        // 作者
+                        $('#author').attr('value', res.data.author);
+                        // 发布时间
+                        $('#publish_at').attr('value', res.data.publish_at);
+                        // 来源
+                        $('#source').attr('value', res.data.source);
+                        // 主图
+                        $('#imgUrl').attr('src', res.data.img_url).attr('width', '200').attr('height', '100');
+                        $('#img_url').attr('value', res.data.img_url);
+                        // 文章简介
+                        $('#description').attr('value', res.data.description);
+                        // SEO标题
+                        $('#seo_title').attr('value', res.data.seo_title);
+                        // SEO描述
+                        $('#seo_description').attr('value', res.data.seo_description);
+                        // SEO搜索关键词
+                        $('#seo_keywords').attr('value', res.data.seo_keywords);
+                        // 富文本编辑器
+                        // editor.txt.html(res.data.content);
+                        // 新编辑器
+                        tinyMCE.activeEditor.setContent(res.data.content);
+                        layer.closeAll('loading');
+                    }
+                });
+            }
+
+        });
+    };
+</script>
